@@ -20,6 +20,11 @@ function creatlist() {
     buttonaddlist.textContent = "+"
     buttonaddlist.setAttribute("onclick", `creattextlist("list-${idlist}")`)
     list.appendChild(buttonaddlist);
+
+    const buttonsuptextlist = document.createElement("button");
+    buttonsuptextlist.classList.add("sup");
+    buttonsuptextlist.textContent = 'X';
+    list.appendChild(buttonsuptextlist);
 }
 function creattextlist(listid) {
     idtextlist++;
@@ -45,7 +50,6 @@ function creattextlist(listid) {
     const buttonsuptextlist = document.createElement("button");
     buttonsuptextlist.classList.add("sup");
     buttonsuptextlist.textContent = 'X';
-    // buttonsuptextlist.setAttribute("onclick", `creatsouslist("text-${idtextlist}")`)
     nomlist.appendChild(buttonsuptextlist);
 }
 function creatsouslist(souslistid){
@@ -58,6 +62,11 @@ function creatsouslist(souslistid){
     souslist.classList.add("souslist");
     souslist.textContent = prompt(`sous ajoute`)
     listsous.appendChild(souslist);
+
+    const buttonsuptextlist = document.createElement("button");
+    buttonsuptextlist.classList.add("sup");
+    buttonsuptextlist.textContent = 'X';
+    souslist.appendChild(buttonsuptextlist);
 }
 
 
