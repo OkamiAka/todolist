@@ -1,0 +1,131 @@
+* {
+    margin: 0%;
+}
+
+nav {
+    background-color: #f3f3f3;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+
+}
+
+.Logo:hover {
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
+
+h1 {
+    display: none;
+}
+
+
+#Ajouter {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    font-size: large;
+    font-weight: bold;
+}
+
+.couleur {
+    padding-right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    height: 2.5rem;
+    width: 100px;
+
+}
+
+#Couleur1 {
+    background-color: #b6d8f2;
+    border-radius: 30%;
+    height: 1rem;
+
+}
+
+#Couleur2 {
+    border-radius: 30%;
+    background-color: #b693fc;
+    height: 1rem;
+
+}
+
+
+
+#Couleur3 {
+    border-radius: 30%;
+    background-image: url("img/iroko.jpg");
+    height: 1rem;
+}
+
+
+#Couleur4 {
+    border-radius: 30%;
+    height: 1rem;
+
+    background-color: #a4bd0a;
+}
+
+.titre {
+    display: flex;
+    justify-content: center;
+
+}
+
+.add {
+    display: none;
+}
+
+@media screen and (min-width: 1000px) {
+    nav {
+        background-color: #f3f3f3;
+        color: #666;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: initial;
+    }
+
+    .Logo:hover {
+        transform: rotate(359deg);
+    }
+
+    #Ajouter {
+        display: none;
+    }
+
+    h1 {
+        display: block;
+        font-weight: bold;
+        padding-left: 1rem;
+        font-size: 3rem;
+        color: black;
+    }
+
+    .titre {
+        display: none;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    }
+
+    .add {
+        height: 5rem;
+        width: 5rem;
+        border-color: rgb(130, 3, 3);
+        border-radius: 50%;
+        font-size: large;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        display: block;
+    }
+
+
+}
