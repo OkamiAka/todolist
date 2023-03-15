@@ -44,7 +44,7 @@ function creattextlist(listid) {
 
     const buttonsuptextlist = document.createElement("button");
     buttonsuptextlist.classList.add("sup");
-    buttonsuptextlist.textContent = 'U+1F5D1';
+    buttonsuptextlist.textContent = '🗙';
     // buttonsuptextlist.setAttribute("onclick", `creatsouslist("text-${idtextlist}")`)
     nomlist.appendChild(buttonsuptextlist);
 }
