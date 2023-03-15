@@ -15,8 +15,12 @@ nav {
 
 }
 
+h1 {
+    display: none;
+}
 
-.Ajouter {
+
+#Ajouter {
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
@@ -25,21 +29,24 @@ nav {
 }
 
 .couleur {
-    padding-right: 0.5rem;
+    padding-right: 1rem;
     display: flex;
     justify-content: space-between;
     float: right;
-    height: 1.5rem;
+    height: 2.5rem;
+    width: 100px;
 }
 
 .Couleur1 {
     background-color: #b6d8f2;
     border-radius: 30%;
+    height: 1rem;
 }
 
 .Couleur2 {
     border-radius: 30%;
     background-color: #b693fc;
+    height: 1rem;
 
 }
 
@@ -48,16 +55,48 @@ nav {
 .Couleur3 {
     border-radius: 30%;
     background-color: #ffea2c;
+    height: 1rem;
 }
-
-
-
 
 
 .Couleur4 {
     border-radius: 30%;
+    height: 1rem;
 
     background-color: #a4bd0a;
 }
 
-@media screen {}
+.titre {
+    display: flex;
+    justify-content: center;
+
+}
+
+@media screen and (min-width: 1000px) {
+    nav {
+        border: 1px solid #e7e7e7;
+        background-color: #f3f3f3;
+        color: #666;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: initial;
+    }
+
+    #Ajouter {
+        display: none;
+    }
+
+    h1 {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding-left: 1rem;
+    }
+
+    .titre {
+        display: none;
+    }
+
+
+}
