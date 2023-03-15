@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="" type="image/x-icon">
     <title>To Do List</title>
 </head>
@@ -19,9 +19,7 @@
             </div>
             <h1>To Do List</h1>
 
-            <button id="Ajouter" type="button">
-                +
-            </button>
+            <button id="Ajouter" type="button" onclick="creatlist()">+</button>
             <div class="couleur">
                 <div><button id="Couleur1"></button></div>
                 <div><button id="Couleur2"></button></div>
@@ -31,11 +29,10 @@
         </nav>
     </header>
     <h1 class="titre">To Do List</h1>
-    <button class="add" type="button">+</button>
-    <script src="index.js"></script>
-    <main class="alllist">       
+    <main class="alllist">
     </main>
-    <button id="Ajouter"  onclick="creatlist()">+</button>
+    <button class="Ajouter" onclick="creatlist()">+</button>
+    <script src="index.js"></script>
     <script src="js.js"></script>
 </body>
 
