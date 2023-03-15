@@ -28,6 +28,12 @@ h1 {
     font-weight: bold;
 }
 
+
+
+
+
+
+
 .couleur {
     padding-right: 1rem;
     display: flex;
@@ -35,15 +41,17 @@ h1 {
     float: right;
     height: 2.5rem;
     width: 100px;
+
 }
 
-.Couleur1 {
+#Couleur1 {
     background-color: #b6d8f2;
     border-radius: 30%;
     height: 1rem;
+
 }
 
-.Couleur2 {
+#Couleur2 {
     border-radius: 30%;
     background-color: #b693fc;
     height: 1rem;
@@ -52,14 +60,14 @@ h1 {
 
 
 
-.Couleur3 {
+#Couleur3 {
     border-radius: 30%;
-    background-color: #ffea2c;
+    background-image: url("img/iroko.jpg");
     height: 1rem;
 }
 
 
-.Couleur4 {
+#Couleur4 {
     border-radius: 30%;
     height: 1rem;
 
@@ -89,13 +97,16 @@ h1 {
 
     h1 {
         display: block;
-        font-size: 1.5rem;
         font-weight: bold;
         padding-left: 1rem;
+        font-size: 3rem;
+        color: black;
     }
 
     .titre {
         display: none;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
     }
 
 
