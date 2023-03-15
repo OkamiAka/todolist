@@ -27,6 +27,7 @@ function creattextlist(listid) {
 
     const textlist = document.createElement("details");
     textlist.setAttribute("id", `text-${idtextlist}`)
+    textlist.setAttribute("open","");
     textlist.classList.add("textlist");
     listtext.appendChild(textlist);
 
@@ -37,9 +38,15 @@ function creattextlist(listid) {
 
     const buttonaddtextlist = document.createElement("button");
     buttonaddtextlist.classList.add("add");
-    buttonaddtextlist.textContent = "+"
+    buttonaddtextlist.textContent = "+";
     buttonaddtextlist.setAttribute("onclick", `creatsouslist("text-${idtextlist}")`)
     nomlist.appendChild(buttonaddtextlist);
+
+    const buttonsuptextlist = document.createElement("button");
+    buttonsuptextlist.classList.add("sup");
+    buttonsuptextlist.textContent = "sup";
+    // buttonsuptextlist.setAttribute("onclick", `creatsouslist("text-${idtextlist}")`)
+    nomlist.appendChild(buttonsuptextlist);
 }
 function creatsouslist(souslistid){
     idsouslist++;
