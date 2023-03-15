@@ -6,16 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-    <title>TodoList</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <title>To Do List</title>
 </head>
 
 <body>
-    <main class="alllist">
-        
-    </main>
-    <button id="Ajouter"  onclick="creatlist()">+</button>
-    <script src="js.js"></script>
+    <header>
+        <nav>
+            <div class="Logo">
+                <img src="img/logo.png" alt="Logo de la To Do List" height="100px">
+            </div>
+            <h1>To Do List</h1>
 
+            <button id="Ajouter" type="button" onclick="creatlist()">+</button>
+            <div class="couleur">
+                <div><button id="Couleur1"></button></div>
+                <div><button id="Couleur2"></button></div>
+                <div><button id="Couleur3"></button></div>
+                <div><button id="Couleur4"> </button></div>
+            </div>
+        </nav>
+    </header>
+    <h1 class="titre">To Do List</h1>
+    <main class="alllist">
+    </main>
+    <button class="Ajouter" onclick="creatlist()">+</button>
+    <script src="index.js"></script>
+    <script src="js.js"></script>
 </body>
+
 
 </html>
