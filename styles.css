@@ -1,0 +1,63 @@
+* {
+    margin: 0%;
+}
+
+nav {
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+
+}
+
+
+.Ajouter {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    font-size: large;
+    font-weight: bold;
+}
+
+.couleur {
+    padding-right: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    height: 1.5rem;
+}
+
+.Couleur1 {
+    background-color: #b6d8f2;
+    border-radius: 30%;
+}
+
+.Couleur2 {
+    border-radius: 30%;
+    background-color: #b693fc;
+
+}
+
+
+
+.Couleur3 {
+    border-radius: 30%;
+    background-color: #ffea2c;
+}
+
+
+
+
+
+.Couleur4 {
+    border-radius: 30%;
+
+    background-color: #a4bd0a;
+}
+
+@media screen {}
