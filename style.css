@@ -24,6 +24,18 @@ nav {
   -webkit-transform: scale(2);
   transform: scale(2);
 }
+p.textnom {
+  display: inline-block;
+}
+.check, .check p {
+  color: #666;
+  text-decoration:line-through;
+}
+
+.list {
+  border-radius: 20%;
+  box-shadow: 10px 5px 5px gray;
+}
 
 h1 {
   display: none;
