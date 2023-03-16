@@ -61,10 +61,13 @@ function creatlist() {
     const buttonsuptextlist = document.createElement("button");
     buttonsuptextlist.classList.add("sup");
     buttonsuptextlist.textContent = 'X';
+    buttonsuptextlist.setAttribute("onclick", `suppression("list-${idlist}")`)
     list.appendChild(buttonsuptextlist);
+    
 
     colorlist(color);
 }
+
 
 function creattextlist(listid) {
     idtextlist++;
@@ -90,6 +93,7 @@ function creattextlist(listid) {
     const buttonsuptextlist = document.createElement("button");
     buttonsuptextlist.classList.add("sup");
     buttonsuptextlist.textContent = 'X';
+    buttonsuptextlist.setAttribute("onclick", `suppression("text-${idtextlist}")`)
     nomlist.appendChild(buttonsuptextlist);
 }
 function creatsouslist(souslistid){
@@ -106,6 +110,7 @@ function creatsouslist(souslistid){
     const buttonsuptextlist = document.createElement("button");
     buttonsuptextlist.classList.add("sup");
     buttonsuptextlist.textContent = 'X';
+    buttonsuptextlist.setAttribute("onclick", `suppression("sous-${idsouslist}")`)
     souslist.appendChild(buttonsuptextlist);
 }
 function colorlist(color) {
@@ -127,4 +132,7 @@ function colorlist(color) {
 
 
 
+}
+function suppression(iddelete){
+ document.getElementById(iddelete).remove();
 }
