@@ -18,6 +18,7 @@ button3.addEventListener('click', function () {
     document.body.style.background = "url(img/bois3.jpg)";
     document.querySelector('nav').style.background = "url(img/bois4.png)";
     document.querySelector('h1').style.color = "white";
+    document.getElementsByClassName('list').style.background = 'red';
 });
 
 const button4 = document.querySelector('#Couleur4');
