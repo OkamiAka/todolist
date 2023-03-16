@@ -84,7 +84,6 @@ h1 {
 }
 
 main {
-  background-color: red;
   text-align: center;
   justify-content: content;
 }
@@ -101,9 +100,6 @@ main {
   height: 75%;
 }
 
-div.list {
-  background-color: blue;
-}
 h2 {
   margin: 0%;
 }
@@ -142,7 +138,6 @@ button.sup:hover {
   }
   main {
     display: flex;
-    background-color: red;
     text-align: center;
     justify-content: content;
   }
