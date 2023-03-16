@@ -76,13 +76,22 @@ function creattextlist(listid) {
     const textlist = document.createElement("details");
     textlist.setAttribute("id", `text-${idtextlist}`)
     textlist.setAttribute("open","");
-    textlist.classList.add("textlist");
+    textlist.classList.add("no-check");
     listtext.appendChild(textlist);
 
     const nomlist = document.createElement("summary");
     nomlist.classList.add("nomlist");
-    nomlist.textContent = prompt("ajoute:");
     textlist.appendChild(nomlist);
+
+    const check = document.createElement("button");
+    check.classList.add("no-check");
+    check.textContent = "test";
+    nomlist.appendChild(check);
+
+    const textnom = document.createElement("p");
+    textnom.classList.add("textnom");
+    textnom.textContent = prompt("ajoute:");
+    nomlist.appendChild(textnom);
 
     const buttonaddtextlist = document.createElement("button");
     buttonaddtextlist.classList.add("add");
@@ -126,7 +135,7 @@ function colorlist(color) {
         }else if (color == "Couleur4") {
             document.querySelector(`#list-${i}`).style.background = '#a4bd01';
         } else {
-            document.querySelector(`#list-${i}`).style.background = 'gray';
+            document.querySelector(`#list-${i}`).style.background = '#E5E5E5';
         }
     }
 
