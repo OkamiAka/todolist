@@ -5,10 +5,10 @@ let idsouslist = 0;
 let color = "";
 const button = document.querySelector('#Couleur1');
 button.addEventListener('click', function () {
-    document.body.style.background = "#b6d8f2";
-    document.querySelector('nav').style.background = "#f6f7cf";
-    document.querySelector('h1').style.color = "#b6d8f2";    
-    color=button.id;
+    document.body.style.background = "#ecf8f6";
+    document.querySelector('nav').style.background = "#a7001e";
+    document.querySelector('h1').style.color = "#ecf8f6";
+    color = button.id;
     colorlist(color);
 
 });
@@ -18,7 +18,7 @@ button2.addEventListener('click', function () {
     document.body.style.background = "#b384a7";
     document.querySelector('nav').style.background = "#81657c";
     document.querySelector('h1').style.color = "white";
-    color=button2.id;
+    color = button2.id;
     colorlist(color);
 });
 
@@ -27,7 +27,7 @@ button3.addEventListener('click', function () {
     document.body.style.background = "url(img/bois3.jpg)";
     document.querySelector('nav').style.background = "url(img/bois4.png)";
     document.querySelector('h1').style.color = "white";
-    color=button3.id;
+    color = button3.id;
     colorlist(color);
 });
 
@@ -36,7 +36,7 @@ button4.addEventListener('click', function () {
     document.body.style.background = "#ebf2fa";
     document.querySelector('nav').style.background = "#a4bd01";
     document.querySelector('h1').style.color = "white";
-    color=button4.id;
+    color = button4.id;
     colorlist(color);
 });
 function creatlist() {
@@ -63,7 +63,7 @@ function creatlist() {
     buttonsuptextlist.textContent = 'X';
     buttonsuptextlist.setAttribute("onclick", `suppression("list-${idlist}")`)
     list.appendChild(buttonsuptextlist);
-    
+
 
     colorlist(color);
 }
@@ -75,7 +75,7 @@ function creattextlist(listid) {
 
     const textlist = document.createElement("details");
     textlist.setAttribute("id", `text-${idtextlist}`)
-    textlist.setAttribute("open","");
+    textlist.setAttribute("open", "");
     textlist.classList.add("no-check");
     listtext.appendChild(textlist);
 
@@ -105,7 +105,7 @@ function creattextlist(listid) {
     buttonsuptextlist.setAttribute("onclick", `suppression("text-${idtextlist}")`)
     nomlist.appendChild(buttonsuptextlist);
 }
-function creatsouslist(souslistid){
+function creatsouslist(souslistid) {
     idsouslist++;
 
     const listsous = document.querySelector(`#${souslistid}`);
@@ -128,11 +128,11 @@ function colorlist(color) {
     for (let i = 1; i <= modifColorList.length; i++) {
         if (color == "Couleur1") {
             document.querySelector(`#list-${i}`).style.background = '#f6f7cf';
-        }else if (color == "Couleur2") {
+        } else if (color == "Couleur2") {
             document.querySelector(`#list-${i}`).style.background = '#81657c';
-        }else if (color == "Couleur3") {
+        } else if (color == "Couleur3") {
             document.querySelector(`#list-${i}`).style.background = '#F3E779';
-        }else if (color == "Couleur4") {
+        } else if (color == "Couleur4") {
             document.querySelector(`#list-${i}`).style.background = '#a4bd01';
         } else {
             document.querySelector(`#list-${i}`).style.background = '#E5E5E5';
@@ -142,6 +142,6 @@ function colorlist(color) {
 
 
 }
-function suppression(iddelete){
- document.getElementById(iddelete).remove();
+function suppression(iddelete) {
+    document.getElementById(iddelete).remove();
 }
