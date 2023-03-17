@@ -5,15 +5,11 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
-  align-items: center;
-}
-
 nav {
   background-color: #f3f3f3;
   color: #666;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
   bottom: 0px;
@@ -31,7 +27,12 @@ p.textnom {
   display: inline-block;
 }
 
-.check,
+.no-check button{
+  border: double;
+  background-color: transparent;
+  width: 2rem;
+  height: 2rem;
+}
 .check p {
   color: #666;
   text-decoration: line-through;
@@ -40,6 +41,10 @@ p.textnom {
 .list {
   border-radius: 20%;
   box-shadow: 10px 5px 5px gray;
+  display: initial;
+  word-wrap: break-word;
+  width: 90%;
+  margin-top: 1rem;
 }
 
 h1 {
@@ -64,19 +69,19 @@ h1 {
 
 }
 
+.color {
+  width: 2rem;
+  height: 2rem;
+}
+
 #Couleur1 {
   background-color: #a7001e;
   border-radius: 30%;
-  height: 1.5rem;
-  width: 1.5rem;
-  ;
 }
 
 #Couleur2 {
   border-radius: 30%;
   background-color: #b693fc;
-  height: 1.5rem;
-  width: 1.5rem;
 }
 
 
@@ -84,15 +89,11 @@ h1 {
 #Couleur3 {
   border-radius: 30%;
   background-image: url("img/bois4.png");
-  height: 1.5rem;
-  width: 1.5rem;
 }
 
 
 #Couleur4 {
   border-radius: 30%;
-  height: 1.5rem;
-  width: 1.5rem;
   background-color: #a4bd0a;
 }
 
@@ -119,11 +120,7 @@ main {
   justify-content: center;
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr;
-  width: 70%;
-  height: 75%;
+  flex-direction: column;
 }
 
 h2 {
@@ -141,24 +138,21 @@ button.add {
   color: black;
   border: none;
   margin-right: 5px;
+  background-image: url("../img/ajouter.png");
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
 }
 
-button.add:hover {
-  background-color: yellow;
-  color: black;
-}
 
 button.sup {
   color: red;
-  width: auto;
-  height: auto;
+  width: 2rem;
+  height: 2rem;
   border: none;
-  background-image: url("/img/croix.png");
-}
-
-button.sup:hover {
-  background-color: red;
-  color: black;
+  background-color: transparent;
+  background-image: url("../img/croix.png");
+  background-size: cover;
 }
 
 @media screen and (orientation: landscape) {
@@ -173,11 +167,28 @@ button.sup:hover {
     text-align: center;
     justify-content: content;
   }
+  .no-check button{
+    width: 1rem;
+    height: 1rem;
+  }
+  button.add{
+    width: 1rem;
+    height: 1rem;
+  }
+  button.sup {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .color {
+    width: 1rem;
+    height: 1rem;
+  }
 
   .alllist {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
     justify-items: center;
   }
 
