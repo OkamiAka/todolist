@@ -5,10 +5,12 @@ let idsouslist = 0;
 let color = "";
 const button = document.querySelector('#Couleur1');
 button.addEventListener('click', function () {
-    document.body.style.background = "#ecf8f6";
-    document.querySelector('nav').style.background = "#a7001e";
-    document.querySelector('h1').style.color = "#ecf8f6";
-    color = button.id;
+    document.body.style.background = "#b6d8f2";
+    document.querySelector('nav').style.background = "#f6f7cf";
+    document.querySelector('h1').style.color = "#b6d8f2";
+    document.querySelector('h1.titre').style.color = "black";
+    document.querySelector('h1.titre').style.background = "#f6f7cf";    
+    color=button.id;
     colorlist(color);
 
 });
@@ -18,7 +20,8 @@ button2.addEventListener('click', function () {
     document.body.style.background = "#b384a7";
     document.querySelector('nav').style.background = "#81657c";
     document.querySelector('h1').style.color = "white";
-    color = button2.id;
+    document.querySelector('h1.titre').style.background = "#81657c";
+    color=button2.id;
     colorlist(color);
 });
 
@@ -27,7 +30,9 @@ button3.addEventListener('click', function () {
     document.body.style.background = "url(img/bois3.jpg)";
     document.querySelector('nav').style.background = "url(img/bois4.png)";
     document.querySelector('h1').style.color = "white";
-    color = button3.id;
+    document.querySelector('h1.titre').style.color = "white";
+    document.querySelector('h1.titre').style.background = "url(img/bois4.png)";
+    color=button3.id;
     colorlist(color);
 });
 
@@ -36,7 +41,8 @@ button4.addEventListener('click', function () {
     document.body.style.background = "#ebf2fa";
     document.querySelector('nav').style.background = "#a4bd01";
     document.querySelector('h1').style.color = "white";
-    color = button4.id;
+    document.querySelector('h1.titre').style.background = "#a4bd01";
+    color=button4.id;
     colorlist(color);
 });
 function creatlist() {
@@ -93,11 +99,11 @@ function creattextlist(listid) {
     textnom.textContent = prompt("ajoute:");
     nomlist.appendChild(textnom);
 
-    const buttonaddtextlist = document.createElement("button");
-    buttonaddtextlist.classList.add("add");
-    buttonaddtextlist.textContent = "+";
-    buttonaddtextlist.setAttribute("onclick", `creatsouslist("text-${idtextlist}")`)
-    nomlist.appendChild(buttonaddtextlist);
+    // const buttonaddtextlist = document.createElement("button");
+    // buttonaddtextlist.classList.add("add");
+    // buttonaddtextlist.textContent = "+";
+    // buttonaddtextlist.setAttribute("onclick", `creatsouslist("text-${idtextlist}")`)
+    // nomlist.appendChild(buttonaddtextlist);
 
     const buttonsuptextlist = document.createElement("button");
     buttonsuptextlist.classList.add("sup");

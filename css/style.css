@@ -13,7 +13,7 @@ nav {
   background-color: #f3f3f3;
   color: #666;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
   bottom: 0px;
@@ -40,6 +40,10 @@ p.textnom {
 .list {
   border-radius: 20%;
   box-shadow: 10px 5px 5px gray;
+  display: initial;
+  word-wrap: break-word;
+  width: 90%;
+  margin-top: 1rem;
 }
 
 h1 {
@@ -64,19 +68,19 @@ h1 {
 
 }
 
+.color {
+  width: 2rem;
+  height: 2rem;
+}
+
 #Couleur1 {
   background-color: #a7001e;
   border-radius: 30%;
-  height: 1.5rem;
-  width: 1.5rem;
-  ;
 }
 
 #Couleur2 {
   border-radius: 30%;
   background-color: #b693fc;
-  height: 1.5rem;
-  width: 1.5rem;
 }
 
 
@@ -84,15 +88,11 @@ h1 {
 #Couleur3 {
   border-radius: 30%;
   background-image: url("img/bois4.png");
-  height: 1.5rem;
-  width: 1.5rem;
 }
 
 
 #Couleur4 {
   border-radius: 30%;
-  height: 1.5rem;
-  width: 1.5rem;
   background-color: #a4bd0a;
 }
 
@@ -119,11 +119,10 @@ main {
   justify-content: center;
   height: 100%;
   width: 100%;
-  display: grid;
+  flex-direction: column;
+  /* display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 1fr;
-  width: 70%;
-  height: 75%;
+  grid-template-columns: 100%; */
 }
 
 h2 {
@@ -150,15 +149,11 @@ button.add:hover {
 
 button.sup {
   color: red;
-  width: auto;
-  height: auto;
+  width: 2rem;
+  height: 2rem;
   border: none;
-  background-image: url("/img/croix.png");
-}
-
-button.sup:hover {
-  background-color: red;
-  color: black;
+  background-image: url("https://static.vecteezy.com/ti/vecteur-libre/p3/4223162-sale-grunge-dessin-a-la-main-avec-coups-de-pinceau-croix-x-vector-illustration-isole-sur-fond-blanc-mark-graphic-design-check-mark-symbol-no-button-for-vote-in-check-box-web-etc-gratuit-vectoriel.jpg");
+  background-size: cover;
 }
 
 @media screen and (orientation: landscape) {
@@ -174,10 +169,20 @@ button.sup:hover {
     justify-content: content;
   }
 
+  button.sup {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .color {
+    width: 1rem;
+    height: 1rem;
+  }
+
   .alllist {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
     justify-items: center;
   }
 
