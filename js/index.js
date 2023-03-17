@@ -60,13 +60,13 @@ function creatlist() {
 
     const buttonaddlist = document.createElement("button");
     buttonaddlist.classList.add("add");
-    buttonaddlist.textContent = "+"
+    buttonaddlist.textContent = ""
     buttonaddlist.setAttribute("onclick", `creattextlist("list-${idlist}")`)
     list.appendChild(buttonaddlist);
 
     const buttonsuptextlist = document.createElement("button");
     buttonsuptextlist.classList.add("sup");
-    buttonsuptextlist.textContent = 'X';
+    buttonsuptextlist.textContent = '';
     buttonsuptextlist.setAttribute("onclick", `suppression("list-${idlist}")`)
     list.appendChild(buttonsuptextlist);
 
@@ -74,7 +74,9 @@ function creatlist() {
     colorlist(color);
 }
 
-
+function check(ch,chid) {
+    document.getElementById(ch).className="check"
+}
 function creattextlist(listid) {
     idtextlist++;
     const listtext = document.querySelector(`#${listid}`);
@@ -91,7 +93,9 @@ function creattextlist(listid) {
 
     const check = document.createElement("button");
     check.classList.add("no-check");
-    check.textContent = "test";
+    check.setAttribute("id", `check-${idtextlist}`)
+    check.setAttribute("onclick", `check("text-${idtextlist},check-${idtextlist}")`)
+    check.textContent = "";
     nomlist.appendChild(check);
 
     const textnom = document.createElement("p");
