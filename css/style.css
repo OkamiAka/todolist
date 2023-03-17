@@ -2,9 +2,11 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   align-items: center;
 }
+
 nav {
   background-color: #f3f3f3;
   color: #666;
@@ -16,15 +18,29 @@ nav {
   width: 100%;
 
 }
+
 .Logo:hover {
   -ms-transform: scale(2);
   -webkit-transform: scale(2);
   transform: scale(2);
 }
+p.textnom {
+  display: inline-block;
+}
+.check, .check p {
+  color: #666;
+  text-decoration:line-through;
+}
+
+.list {
+  border-radius: 20%;
+  box-shadow: 10px 5px 5px gray;
+}
 
 h1 {
   display: none;
 }
+
 #Ajouter {
   height: 3rem;
   width: 3rem;
@@ -73,6 +89,7 @@ h1 {
   width: 1rem;
   background-color: #a4bd0a;
 }
+
 .titre {
   display: flex;
   justify-content: center;
@@ -84,10 +101,10 @@ h1 {
 }
 
 main {
-  background-color: red;
   text-align: center;
   justify-content: content;
 }
+
 .alllist {
   display: flex;
   align-items: center;
@@ -101,12 +118,10 @@ main {
   height: 75%;
 }
 
-div.list {
-  background-color: blue;
-}
 h2 {
   margin: 0%;
 }
+
 button {
   width: auto;
   height: auto;
@@ -119,16 +134,19 @@ button.add {
   border: none;
   margin-right: 5px;
 }
+
 button.add:hover {
   background-color: yellow;
   color: black;
 }
+
 button.sup {
   color: red;
   width: auto;
   height: auto;
   border: none;
 }
+
 button.sup:hover {
   background-color: red;
   color: black;
@@ -140,22 +158,25 @@ button.sup:hover {
     align-items: center;
     justify-content: center;
   }
+
   main {
     display: flex;
-    background-color: red;
     text-align: center;
     justify-content: content;
   }
+
   .alllist {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
   }
+
   .list {
     width: 90%;
     margin: 5px;
   }
+
   nav {
     background-color: #f3f3f3;
     color: #666;
@@ -163,31 +184,31 @@ button.sup:hover {
     justify-content: space-between;
     align-items: center;
     position: initial;
-}
+  }
 
-.Logo:hover {
+  .Logo:hover {
     transform: rotate(359deg);
-}
+  }
 
-#Ajouter {
+  #Ajouter {
     display: none;
-}
+  }
 
-h1 {
+  h1 {
     display: block;
     font-weight: bold;
     padding-left: 1rem;
     font-size: 3rem;
     color: black;
-}
+  }
 
-.titre {
+  .titre {
     display: none;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
-}
+  }
 
-.Ajouter {
+  .Ajouter {
     height: 5rem;
     width: 5rem;
     border-color: rgb(130, 3, 3);
@@ -197,6 +218,6 @@ h1 {
     bottom: 1rem;
     right: 1rem;
     display: block;
-}
+  }
 
 }
