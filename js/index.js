@@ -60,28 +60,30 @@ function creatlist() {
 
     const buttonaddlist = document.createElement("button");
     buttonaddlist.classList.add("add");
-    buttonaddlist.textContent = "+"
+    buttonaddlist.textContent = ""
     buttonaddlist.setAttribute("onclick", `creattextlist("list-${idlist}")`)
     list.appendChild(buttonaddlist);
 
     const buttonsuptextlist = document.createElement("button");
     buttonsuptextlist.classList.add("sup");
-    buttonsuptextlist.textContent = 'X';
+    buttonsuptextlist.textContent = '';
     buttonsuptextlist.setAttribute("onclick", `suppression("list-${idlist}")`)
     list.appendChild(buttonsuptextlist);
-    
+
 
     colorlist(color);
 }
 
-
+function check(ch,chid) {
+    document.getElementById(ch).className="check"
+}
 function creattextlist(listid) {
     idtextlist++;
     const listtext = document.querySelector(`#${listid}`);
 
     const textlist = document.createElement("details");
     textlist.setAttribute("id", `text-${idtextlist}`)
-    textlist.setAttribute("open","");
+    textlist.setAttribute("open", "");
     textlist.classList.add("no-check");
     listtext.appendChild(textlist);
 
@@ -91,7 +93,9 @@ function creattextlist(listid) {
 
     const check = document.createElement("button");
     check.classList.add("no-check");
-    check.textContent = "test";
+    check.setAttribute("id", `check-${idtextlist}`)
+    check.setAttribute("onclick", `check("text-${idtextlist},check-${idtextlist}")`)
+    check.textContent = "";
     nomlist.appendChild(check);
 
     const textnom = document.createElement("p");
@@ -111,7 +115,7 @@ function creattextlist(listid) {
     buttonsuptextlist.setAttribute("onclick", `suppression("text-${idtextlist}")`)
     nomlist.appendChild(buttonsuptextlist);
 }
-function creatsouslist(souslistid){
+function creatsouslist(souslistid) {
     idsouslist++;
 
     const listsous = document.querySelector(`#${souslistid}`);
@@ -134,11 +138,11 @@ function colorlist(color) {
     for (let i = 1; i <= modifColorList.length; i++) {
         if (color == "Couleur1") {
             document.querySelector(`#list-${i}`).style.background = '#f6f7cf';
-        }else if (color == "Couleur2") {
+        } else if (color == "Couleur2") {
             document.querySelector(`#list-${i}`).style.background = '#81657c';
-        }else if (color == "Couleur3") {
+        } else if (color == "Couleur3") {
             document.querySelector(`#list-${i}`).style.background = '#F3E779';
-        }else if (color == "Couleur4") {
+        } else if (color == "Couleur4") {
             document.querySelector(`#list-${i}`).style.background = '#a4bd01';
         } else {
             document.querySelector(`#list-${i}`).style.background = '#E5E5E5';
@@ -148,6 +152,6 @@ function colorlist(color) {
 
 
 }
-function suppression(iddelete){
- document.getElementById(iddelete).remove();
+function suppression(iddelete) {
+    document.getElementById(iddelete).remove();
 }
