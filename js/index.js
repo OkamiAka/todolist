@@ -5,11 +5,17 @@ let idsouslist = 0;
 let color = "";
 const button = document.querySelector('#Couleur1');
 button.addEventListener('click', function () {
-    document.body.style.background = "#b6d8f2";
-    document.querySelector('nav').style.background = "#f6f7cf";
-    document.querySelector('h1').style.color = "#b6d8f2";
+    const bgbody = "#b6d8f2";
+    const bgnav = "#f6f7cf";
+    document.body.style.background = bgbody;
+    document.querySelector('nav').style.background = bgnav;
+    document.querySelector('h1').style.color = bgbody;
     document.querySelector('h1.titre').style.color = "black";
-    document.querySelector('h1.titre').style.background = "#f6f7cf";
+    document.querySelector('h1.titre').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.background = bgbody;
+    document.querySelector('button.Ajouter').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.color = "black";
+    document.querySelector('button.Ajouter').style.color = "black";
     color = button.id;
     colorlist(color);
 
@@ -17,31 +23,49 @@ button.addEventListener('click', function () {
 
 const button2 = document.querySelector('#Couleur2');
 button2.addEventListener('click', function () {
-    document.body.style.background = "#b384a7";
-    document.querySelector('nav').style.background = "#81657c";
+    const bgbody = "#b384a7";
+    const bgnav = "#81657c";
+    document.body.style.background = bgbody;
+    document.querySelector('nav').style.background = bgnav;
     document.querySelector('h1').style.color = "white";
-    document.querySelector('h1.titre').style.background = "#81657c";
+    document.querySelector('h1.titre').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.background = bgbody;
+    document.querySelector('button.Ajouter').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.color = "white";
+    document.querySelector('button.Ajouter').style.color = "white";
     color = button2.id;
     colorlist(color);
 });
 
 const button3 = document.querySelector('#Couleur3');
 button3.addEventListener('click', function () {
-    document.body.style.background = "url(img/bois3.jpg)";
-    document.querySelector('nav').style.background = "url(img/bois4.png)";
+    const bgbody = "url(img/bois3.jpg)";
+    const bgnav = "url(img/bois4.png)";
+    document.body.style.background = bgbody;
+    document.querySelector('nav').style.background = bgnav;
     document.querySelector('h1').style.color = "white";
     document.querySelector('h1.titre').style.color = "white";
-    document.querySelector('h1.titre').style.background = "url(img/bois4.png)";
+    document.querySelector('h1.titre').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.background = bgbody;
+    document.querySelector('button.Ajouter').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.color = "black";
+    document.querySelector('button.Ajouter').style.color = "white";
     color = button3.id;
     colorlist(color);
 });
 
 const button4 = document.querySelector('#Couleur4');
 button4.addEventListener('click', function () {
-    document.body.style.background = "#ebf2fa";
-    document.querySelector('nav').style.background = "#a4bd01";
+    const bgbody = "#ebf2fa";
+    const bgnav = "#a4bd01";
+    document.body.style.background = bgbody;
+    document.querySelector('nav').style.background = bgnav;
     document.querySelector('h1').style.color = "white";
-    document.querySelector('h1.titre').style.background = "#a4bd01";
+    document.querySelector('h1.titre').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.background = bgbody;
+    document.querySelector('button.Ajouter').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.color = "black";
+    document.querySelector('button.Ajouter').style.color = "white";
     color = button4.id;
     colorlist(color);
 });
