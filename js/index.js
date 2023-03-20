@@ -105,13 +105,13 @@ function creattextlist(listid) {
 
     // const buttonaddtextlist = document.createElement("button");
     // buttonaddtextlist.classList.add("add");
-    // buttonaddtextlist.textContent = "+";
+    // buttonaddtextlist.textContent = "";
     // buttonaddtextlist.setAttribute("onclick", `creatsouslist("text-${idtextlist}")`)
     // nomlist.appendChild(buttonaddtextlist);
 
     const buttonsuptextlist = document.createElement("button");
     buttonsuptextlist.classList.add("sup");
-    buttonsuptextlist.textContent = 'X';
+    buttonsuptextlist.textContent = '';
     buttonsuptextlist.setAttribute("onclick", `suppression("text-${idtextlist}")`)
     nomlist.appendChild(buttonsuptextlist);
 }
