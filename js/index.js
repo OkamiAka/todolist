@@ -5,44 +5,68 @@ let idsouslist = 0;
 let color = "";
 const button = document.querySelector('#Couleur1');
 button.addEventListener('click', function () {
-    document.body.style.background = "#b6d8f2";
-    document.querySelector('nav').style.background = "#f6f7cf";
-    document.querySelector('h1').style.color = "#b6d8f2";
+    const bgbody = "#b6d8f2";
+    const bgnav = "#f6f7cf";
+    document.body.style.background = bgbody;
+    document.querySelector('nav').style.background = bgnav;
+    document.querySelector('h1').style.color = bgbody;
     document.querySelector('h1.titre').style.color = "black";
-    document.querySelector('h1.titre').style.background = "#f6f7cf";    
-    color=button.id;
+    document.querySelector('h1.titre').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.background = bgbody;
+    document.querySelector('button.Ajouter').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.color = "black";
+    document.querySelector('button.Ajouter').style.color = "black";
+    color = button.id;
     colorlist(color);
 
 });
 
 const button2 = document.querySelector('#Couleur2');
 button2.addEventListener('click', function () {
-    document.body.style.background = "#b384a7";
-    document.querySelector('nav').style.background = "#81657c";
+    const bgbody = "#b384a7";
+    const bgnav = "#81657c";
+    document.body.style.background = bgbody;
+    document.querySelector('nav').style.background = bgnav;
     document.querySelector('h1').style.color = "white";
-    document.querySelector('h1.titre').style.background = "#81657c";
-    color=button2.id;
+    document.querySelector('h1.titre').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.background = bgbody;
+    document.querySelector('button.Ajouter').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.color = "white";
+    document.querySelector('button.Ajouter').style.color = "white";
+    color = button2.id;
     colorlist(color);
 });
 
 const button3 = document.querySelector('#Couleur3');
 button3.addEventListener('click', function () {
-    document.body.style.background = "url(img/bois3.jpg)";
-    document.querySelector('nav').style.background = "url(img/bois4.png)";
+    const bgbody = "url(img/bois3.jpg)";
+    const bgnav = "url(img/bois4.png)";
+    document.body.style.background = bgbody;
+    document.querySelector('nav').style.background = bgnav;
     document.querySelector('h1').style.color = "white";
     document.querySelector('h1.titre').style.color = "white";
-    document.querySelector('h1.titre').style.background = "url(img/bois4.png)";
-    color=button3.id;
+    document.querySelector('h1.titre').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.background = bgbody;
+    document.querySelector('button.Ajouter').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.color = "black";
+    document.querySelector('button.Ajouter').style.color = "white";
+    color = button3.id;
     colorlist(color);
 });
 
 const button4 = document.querySelector('#Couleur4');
 button4.addEventListener('click', function () {
-    document.body.style.background = "#ebf2fa";
-    document.querySelector('nav').style.background = "#a4bd01";
+    const bgbody = "#ebf2fa";
+    const bgnav = "#a4bd01";
+    document.body.style.background = bgbody;
+    document.querySelector('nav').style.background = bgnav;
     document.querySelector('h1').style.color = "white";
-    document.querySelector('h1.titre').style.background = "#a4bd01";
-    color=button4.id;
+    document.querySelector('h1.titre').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.background = bgbody;
+    document.querySelector('button.Ajouter').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.color = "black";
+    document.querySelector('button.Ajouter').style.color = "white";
+    color = button4.id;
     colorlist(color);
 });
 function creatlist() {
@@ -74,10 +98,51 @@ function creatlist() {
     colorlist(color);
 }
 
-function check(ch,chid) {
-    document.getElementById(ch).className="check"
+function check(ch, chid) {
+    if (document.querySelector(`#${ch}`).className == "check") {
+        document.querySelector(`#${ch}`).className = "no-check"
+        document.querySelector(`#${chid}`).className = "no-check"
+    } else {
+        document.querySelector(`#${ch}`).className = "check"
+        document.querySelector(`#${chid}`).className = "check"
+    }
 }
 function creattextlist(listid) {
+    idtextlist++;
+    const listtext = document.querySelector(`#${listid}`);
+    
+    const textlist = document.createElement("div");
+    textlist.setAttribute("id", `text-${idtextlist}`)
+    textlist.setAttribute("open", "");
+    textlist.classList.add("no-check");
+    listtext.appendChild(textlist);
+    
+    const nomlist = document.createElement("p");
+    nomlist.classList.add("nomlist");
+    textlist.appendChild(nomlist);
+    
+    const check = document.createElement("button");
+    check.classList.add("no-check");
+    check.setAttribute("id", `check-${idtextlist}`)
+    check.setAttribute("onclick", `check("text-${idtextlist},check-${idtextlist}")`)
+    check.textContent = "";
+    nomlist.appendChild(check);
+    
+    const textnom = document.createElement("p");
+    textnom.classList.add("textnom");
+    textnom.textContent = prompt("ajoute:");
+    nomlist.appendChild(textnom);
+
+    const buttonsuptextlist = document.createElement("button");
+    buttonsuptextlist.classList.add("sup");
+    buttonsuptextlist.textContent = '';
+    buttonsuptextlist.setAttribute("onclick", `suppression("text-${idtextlist}")`)
+    nomlist.appendChild(buttonsuptextlist);
+    if (textnom.textContent==null||textnom.textContent=='') {
+        suppression(`text-${idtextlist}`,"yes")
+    }
+}
+function creattextlistplus(listid) {
     idtextlist++;
     const listtext = document.querySelector(`#${listid}`);
 
@@ -103,15 +168,15 @@ function creattextlist(listid) {
     textnom.textContent = prompt("ajoute:");
     nomlist.appendChild(textnom);
 
-    // const buttonaddtextlist = document.createElement("button");
-    // buttonaddtextlist.classList.add("add");
-    // buttonaddtextlist.textContent = "+";
-    // buttonaddtextlist.setAttribute("onclick", `creatsouslist("text-${idtextlist}")`)
-    // nomlist.appendChild(buttonaddtextlist);
+    const buttonaddtextlist = document.createElement("button");
+    buttonaddtextlist.classList.add("add");
+    buttonaddtextlist.textContent = "";
+    buttonaddtextlist.setAttribute("onclick", `creatsouslist("text-${idtextlist}")`)
+    nomlist.appendChild(buttonaddtextlist);
 
     const buttonsuptextlist = document.createElement("button");
     buttonsuptextlist.classList.add("sup");
-    buttonsuptextlist.textContent = 'X';
+    buttonsuptextlist.textContent = '';
     buttonsuptextlist.setAttribute("onclick", `suppression("text-${idtextlist}")`)
     nomlist.appendChild(buttonsuptextlist);
 }
@@ -128,7 +193,7 @@ function creatsouslist(souslistid) {
 
     const buttonsuptextlist = document.createElement("button");
     buttonsuptextlist.classList.add("sup");
-    buttonsuptextlist.textContent = 'X';
+    buttonsuptextlist.textContent = '';
     buttonsuptextlist.setAttribute("onclick", `suppression("sous-${idsouslist}")`)
     souslist.appendChild(buttonsuptextlist);
 }
@@ -148,10 +213,13 @@ function colorlist(color) {
             document.querySelector(`#list-${i}`).style.background = '#E5E5E5';
         }
     }
-
-
-
 }
-function suppression(iddelete) {
-    document.getElementById(iddelete).remove();
+function suppression(iddelete,choix) {
+    if (choix=="yes") {
+        document.getElementById(iddelete).remove();
+    } else {
+        if (confirm("Etes vous sur de vouloir supprimer?")) {
+        document.getElementById(iddelete).remove();
+    }
+    }
 }
