@@ -42,14 +42,16 @@ button3.addEventListener('click', function () {
     const bgbody = "url(img/bois3.jpg)";
     const bgnav = "url(img/bois4.png)";
     document.body.style.background = bgbody;
+    document.body.style.backgroundSize = "cover";
     document.querySelector('nav').style.background = bgnav;
+    document.querySelector('nav').style.backgroundSize = "cover";
     document.querySelector('h1').style.color = "white";
     document.querySelector('h1.titre').style.color = "white";
     document.querySelector('h1.titre').style.background = bgnav;
-    document.querySelector('button#Ajouter').style.background = bgbody;
-    document.querySelector('button.Ajouter').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.background = '#F3E779';
+    document.querySelector('button.Ajouter').style.background = '#F3E779';
     document.querySelector('button#Ajouter').style.color = "black";
-    document.querySelector('button.Ajouter').style.color = "white";
+    document.querySelector('button.Ajouter').style.color = "black";
     color = button3.id;
     colorlist(color);
 });
@@ -69,6 +71,79 @@ button4.addEventListener('click', function () {
     color = button4.id;
     colorlist(color);
 });
+
+const button5 = document.querySelector('#Couleur5');
+button5.addEventListener('click', function () {
+    const bgbody = "";
+    const bgnav = "";
+    document.body.style.background = bgbody;
+    document.querySelector('nav').style.background = bgnav;
+    document.querySelector('h1').style.color = bgbody;
+    document.querySelector('h1.titre').style.color = "";
+    document.querySelector('h1.titre').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.background = bgbody;
+    document.querySelector('button.Ajouter').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.color = "";
+    document.querySelector('button.Ajouter').style.color = "";
+    color = button5.id;
+    colorlist(color);
+
+});
+
+const buttonWild = document.querySelector('#CouleurWild');
+buttonWild.addEventListener('click', function () {
+    const bgbody = "#d8d8d8";
+    const bgnav = "#F7146B";
+    document.body.style.background = bgbody;
+    document.querySelector('nav').style.background = bgnav;
+    document.querySelector('h1').style.color = bgbody;
+    document.querySelector('h1.titre').style.color = "";
+    document.querySelector('h1.titre').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.background = bgbody;
+    document.querySelector('button.Ajouter').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.color = "";
+    document.querySelector('button.Ajouter').style.color = "";
+    color = buttonWild.id;
+    colorlist(color);
+
+});
+
+const buttonSombre = document.querySelector('#CouleurSombre');
+buttonSombre.addEventListener('click', function () {
+    const bgbody = "black";
+    const bgnav = "grey";
+    document.body.style.background = bgbody;
+    document.querySelector('nav').style.background = bgnav;
+    document.querySelector('h1').style.color = bgbody;
+    document.querySelector('h1.titre').style.color = "black";
+    document.querySelector('h1.titre').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.background = bgbody;
+    document.querySelector('button.Ajouter').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.color = "white";
+    document.querySelector('button.Ajouter').style.color = "black";
+    color = buttonSombre.id;
+    colorlist(color);
+
+});
+
+const buttonDef = document.querySelector('#CouleurDef');
+buttonDef.addEventListener('click', function () {
+    const bgbody = "white";
+    const bgnav = '#E5E5E5';
+    document.body.style.background = bgbody;
+    document.querySelector('nav').style.background = bgnav;
+    document.querySelector('h1').style.color = "black";
+    document.querySelector('h1.titre').style.color = "black";
+    document.querySelector('h1.titre').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.background = bgbody;
+    document.querySelector('button.Ajouter').style.background = bgnav;
+    document.querySelector('button#Ajouter').style.color = "black";
+    document.querySelector('button.Ajouter').style.color = "black";
+    color = buttonDef.id;
+    colorlist(color);
+
+});
+
 function creatlist() {
     idlist++;
 
@@ -209,7 +284,13 @@ function colorlist(color) {
             document.querySelector(`#list-${i}`).style.background = '#F3E779';
         } else if (color == "Couleur4") {
             document.querySelector(`#list-${i}`).style.background = '#a4bd01';
-        } else {
+        } else if (color == "Couleur5") {
+            document.querySelector(`#list-${i}`).style.background = '';
+        } else if (color == "CouleurWild") {
+            document.querySelector(`#list-${i}`).style.background = '#F7146B';
+        } else if (color == "CouleurSombre") {
+            document.querySelector(`#list-${i}`).style.background = 'grey';
+        } else{
             document.querySelector(`#list-${i}`).style.background = '#E5E5E5';
         }
     }
