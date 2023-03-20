@@ -75,9 +75,42 @@ function creatlist() {
 }
 
 function check(ch,chid) {
-    document.getElementById(ch).className="check"
+    document.querySelector(`#${ch}`).className="check"
+    document.querySelector(`#${chid}`).className="check"
 }
 function creattextlist(listid) {
+    idtextlist++;
+    const listtext = document.querySelector(`#${listid}`);
+
+    const textlist = document.createElement("div");
+    textlist.setAttribute("id", `text-${idtextlist}`)
+    textlist.setAttribute("open", "");
+    textlist.classList.add("no-check");
+    listtext.appendChild(textlist);
+
+    const nomlist = document.createElement("p");
+    nomlist.classList.add("nomlist");
+    textlist.appendChild(nomlist);
+
+    const check = document.createElement("button");
+    check.classList.add("no-check");
+    check.setAttribute("id", `check-${idtextlist}`)
+    check.setAttribute("onclick", `check("text-${idtextlist},check-${idtextlist}")`)
+    check.textContent = "";
+    nomlist.appendChild(check);
+
+    const textnom = document.createElement("p");
+    textnom.classList.add("textnom");
+    textnom.textContent = prompt("ajoute:");
+    nomlist.appendChild(textnom);
+
+    const buttonsuptextlist = document.createElement("button");
+    buttonsuptextlist.classList.add("sup");
+    buttonsuptextlist.textContent = '';
+    buttonsuptextlist.setAttribute("onclick", `suppression("text-${idtextlist}")`)
+    nomlist.appendChild(buttonsuptextlist);
+}
+function creattextlistplus(listid) {
     idtextlist++;
     const listtext = document.querySelector(`#${listid}`);
 
@@ -103,11 +136,11 @@ function creattextlist(listid) {
     textnom.textContent = prompt("ajoute:");
     nomlist.appendChild(textnom);
 
-    // const buttonaddtextlist = document.createElement("button");
-    // buttonaddtextlist.classList.add("add");
-    // buttonaddtextlist.textContent = "";
-    // buttonaddtextlist.setAttribute("onclick", `creatsouslist("text-${idtextlist}")`)
-    // nomlist.appendChild(buttonaddtextlist);
+    const buttonaddtextlist = document.createElement("button");
+    buttonaddtextlist.classList.add("add");
+    buttonaddtextlist.textContent = "";
+    buttonaddtextlist.setAttribute("onclick", `creatsouslist("text-${idtextlist}")`)
+    nomlist.appendChild(buttonaddtextlist);
 
     const buttonsuptextlist = document.createElement("button");
     buttonsuptextlist.classList.add("sup");
@@ -128,7 +161,7 @@ function creatsouslist(souslistid) {
 
     const buttonsuptextlist = document.createElement("button");
     buttonsuptextlist.classList.add("sup");
-    buttonsuptextlist.textContent = 'X';
+    buttonsuptextlist.textContent = '';
     buttonsuptextlist.setAttribute("onclick", `suppression("sous-${idsouslist}")`)
     souslist.appendChild(buttonsuptextlist);
 }
@@ -153,5 +186,8 @@ function colorlist(color) {
 
 }
 function suppression(iddelete) {
-    document.getElementById(iddelete).remove();
+    if (confirm("Etes vous sur de vouloir supprimer?")) {
+        document.getElementById(iddelete).remove();
+    }
+    
 }
