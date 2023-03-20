@@ -27,12 +27,19 @@ p.textnom {
   display: inline-block;
 }
 
-.no-check button{
+.no-check button {
   border: double;
   background-color: transparent;
   width: 2rem;
   height: 2rem;
 }
+.check button {
+  border: double;
+  background-color: gray;
+  width: 2rem;
+  height: 2rem;
+}
+
 .check p {
   color: #666;
   text-decoration: line-through;
@@ -167,14 +174,20 @@ button.sup {
     text-align: center;
     justify-content: content;
   }
-  .no-check button{
+
+  .no-check button {
     width: 1rem;
     height: 1rem;
   }
-  button.add{
+  .check button {
     width: 1rem;
     height: 1rem;
   }
+  button.add {
+    width: 1rem;
+    height: 1rem;
+  }
+
   button.sup {
     width: 1rem;
     height: 1rem;
@@ -239,3 +252,4 @@ button.sup {
     right: 1rem;
     display: block;
   }
+}

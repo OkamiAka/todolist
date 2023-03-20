@@ -9,8 +9,8 @@ button.addEventListener('click', function () {
     document.querySelector('nav').style.background = "#f6f7cf";
     document.querySelector('h1').style.color = "#b6d8f2";
     document.querySelector('h1.titre').style.color = "black";
-    document.querySelector('h1.titre').style.background = "#f6f7cf";    
-    color=button.id;
+    document.querySelector('h1.titre').style.background = "#f6f7cf";
+    color = button.id;
     colorlist(color);
 
 });
@@ -21,7 +21,7 @@ button2.addEventListener('click', function () {
     document.querySelector('nav').style.background = "#81657c";
     document.querySelector('h1').style.color = "white";
     document.querySelector('h1.titre').style.background = "#81657c";
-    color=button2.id;
+    color = button2.id;
     colorlist(color);
 });
 
@@ -32,7 +32,7 @@ button3.addEventListener('click', function () {
     document.querySelector('h1').style.color = "white";
     document.querySelector('h1.titre').style.color = "white";
     document.querySelector('h1.titre').style.background = "url(img/bois4.png)";
-    color=button3.id;
+    color = button3.id;
     colorlist(color);
 });
 
@@ -42,7 +42,7 @@ button4.addEventListener('click', function () {
     document.querySelector('nav').style.background = "#a4bd01";
     document.querySelector('h1').style.color = "white";
     document.querySelector('h1.titre').style.background = "#a4bd01";
-    color=button4.id;
+    color = button4.id;
     colorlist(color);
 });
 function creatlist() {
@@ -74,31 +74,36 @@ function creatlist() {
     colorlist(color);
 }
 
-function check(ch,chid) {
-    document.querySelector(`#${ch}`).className="check"
-    document.querySelector(`#${chid}`).className="check"
+function check(ch, chid) {
+    if (document.querySelector(`#${ch}`).className == "check") {
+        document.querySelector(`#${ch}`).className = "no-check"
+        document.querySelector(`#${chid}`).className = "no-check"
+    } else {
+        document.querySelector(`#${ch}`).className = "check"
+        document.querySelector(`#${chid}`).className = "check"
+    }
 }
 function creattextlist(listid) {
     idtextlist++;
     const listtext = document.querySelector(`#${listid}`);
-
+    
     const textlist = document.createElement("div");
     textlist.setAttribute("id", `text-${idtextlist}`)
     textlist.setAttribute("open", "");
     textlist.classList.add("no-check");
     listtext.appendChild(textlist);
-
+    
     const nomlist = document.createElement("p");
     nomlist.classList.add("nomlist");
     textlist.appendChild(nomlist);
-
+    
     const check = document.createElement("button");
     check.classList.add("no-check");
     check.setAttribute("id", `check-${idtextlist}`)
     check.setAttribute("onclick", `check("text-${idtextlist},check-${idtextlist}")`)
     check.textContent = "";
     nomlist.appendChild(check);
-
+    
     const textnom = document.createElement("p");
     textnom.classList.add("textnom");
     textnom.textContent = prompt("ajoute:");
@@ -109,6 +114,9 @@ function creattextlist(listid) {
     buttonsuptextlist.textContent = '';
     buttonsuptextlist.setAttribute("onclick", `suppression("text-${idtextlist}")`)
     nomlist.appendChild(buttonsuptextlist);
+    if (textnom.textContent==null||textnom.textContent=='') {
+        suppression(`text-${idtextlist}`,"yes")
+    }
 }
 function creattextlistplus(listid) {
     idtextlist++;
@@ -181,13 +189,13 @@ function colorlist(color) {
             document.querySelector(`#list-${i}`).style.background = '#E5E5E5';
         }
     }
-
-
-
 }
-function suppression(iddelete) {
-    if (confirm("Etes vous sur de vouloir supprimer?")) {
+function suppression(iddelete,choix) {
+    if (choix=="yes") {
+        document.getElementById(iddelete).remove();
+    } else {
+        if (confirm("Etes vous sur de vouloir supprimer?")) {
         document.getElementById(iddelete).remove();
     }
-    
+    }
 }
