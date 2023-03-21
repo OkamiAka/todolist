@@ -171,6 +171,9 @@ function creatlist() {
 
 
     colorlist(color);
+
+    list.style.animationName ="startlist";
+    list.style.animationDuration="2s"
 }
 
 function check(ch, chid) {
