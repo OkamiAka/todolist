@@ -145,22 +145,25 @@ function creatlist() {
   const list = document.createElement("div");
   list.setAttribute("id", `list-${idlist}`);
   list.classList.add("list");
+  
+  const para = document.createElement("p");
+  list.appendChild(para)
   lists.appendChild(list);
-
+  
   const titlelist = document.createElement("h2");
   titlelist.classList.add("titlelist");
   titlelist.textContent = prompt("Nom de la liste:");
-  list.appendChild(titlelist);
+  para.appendChild(titlelist);
 
   const buttonaddlist = document.createElement("button");
   buttonaddlist.classList.add("add");
   buttonaddlist.setAttribute("onclick", `creattextlist("list-${idlist}")`);
-  list.appendChild(buttonaddlist);
+  para.appendChild(buttonaddlist);
 
   const buttonsuptextlist = document.createElement("button");
   buttonsuptextlist.classList.add("sup");
   buttonsuptextlist.setAttribute("onclick", `suppression("list-${idlist}")`);
-  list.appendChild(buttonsuptextlist);
+  para.appendChild(buttonsuptextlist);
 
   colorlist(color);
 
@@ -202,7 +205,7 @@ function check(ch, chid) {
 }
 function creattextlist(listid) {
   idtextlist++;
-  const listtext = document.querySelector(`#${listid}`);
+  const listtext = document.querySelector(`#${listid} p`);
 
   const textlist = document.createElement("div");
   textlist.setAttribute("id", `text-${idtextlist}`);
