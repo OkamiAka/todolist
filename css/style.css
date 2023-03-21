@@ -179,6 +179,7 @@ button.sup {
 p.nume{
   display: flex;
   justify-content: center;
+  vertical-align: baseline;
 }
 
 @keyframes startlist {
