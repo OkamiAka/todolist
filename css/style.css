@@ -48,7 +48,7 @@ p.textnom {
 
 .list {
   border-radius: 20%;
-  box-shadow: 10px 5px 5px gray;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
   display: initial;
   word-wrap: break-word;
   width: 90%;
@@ -91,7 +91,7 @@ h1 {
 }
 
 #Couleur3 {
-  background-image: url("../img/bois4.png");
+  background-image: url("../img/bois3.jpg");
 }
 
 
@@ -105,7 +105,7 @@ h1 {
 
 #CouleurWild {
   background-color: #F7146B;
-  background-image: url(../img/wild.png);
+  background-image: url("../img/wild.png");
   background-size: cover;
 }
 

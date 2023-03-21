@@ -3,6 +3,7 @@ let idlist = 0;
 let idtextlist = 0;
 let idsouslist = 0;
 let color = "";
+let nombreList = 0;
 const button = document.querySelector("#Couleur1");
 button.addEventListener("click", function () {
   const bgbody = "#b6d8f2";
@@ -145,11 +146,11 @@ function creatlist() {
   const list = document.createElement("div");
   list.setAttribute("id", `list-${idlist}`);
   list.classList.add("list");
-  
+
   const para = document.createElement("p");
   list.appendChild(para)
   lists.appendChild(list);
-  
+
   const titlelist = document.createElement("h2");
   titlelist.classList.add("titlelist");
   titlelist.textContent = prompt("Nom de la liste:");
@@ -162,7 +163,7 @@ function creatlist() {
 
   const buttonsuptextlist = document.createElement("button");
   buttonsuptextlist.classList.add("sup");
-  buttonsuptextlist.setAttribute("onclick", `suppression("list-${idlist}")`);
+  buttonsuptextlist.setAttribute("onclick", `suppression("list-${idlist}","list")`);
   para.appendChild(buttonsuptextlist);
 
   colorlist(color);
@@ -172,16 +173,16 @@ function creatlist() {
   list.appendChild(nume);
 
   const numelist = document.createElement("p");
-  numelist.textContent=idlist+"/";
+  numelist.textContent = ++nombreList + "/";
   nume.appendChild(numelist);
 
   const numealllist = document.createElement("p");
-  numealllist.textContent=idlist;
+  numealllist.textContent = nombreList;
   numealllist.classList.add("allnume");
-  numealllist.setAttribute("id", `nume-${idlist}`);
+  numealllist.setAttribute("id", `nume-${nombreList}`);
   nume.appendChild(numealllist);
 
-  numeall(idlist);
+  numeall(nombreList);
 
   list.style.animationName = "startlist";
   list.style.animationDuration = "2s";
@@ -190,7 +191,7 @@ function creatlist() {
 function numeall(id) {
   const allList = document.getElementsByClassName("allnume");
   for (let i = 1; i <= allList.length; i++) {
-    document.querySelector(`#nume-${i}`).textContent=id;
+    document.querySelector(`#nume-${i}`).textContent = id;
   }
 }
 
@@ -233,9 +234,7 @@ function creattextlist(listid) {
 
   const buttonsuptextlist = document.createElement("button");
   buttonsuptextlist.classList.add("sup");
-  buttonsuptextlist.setAttribute(
-    "onclick",
-    `suppression("text-${idtextlist}")`
+  buttonsuptextlist.setAttribute("onclick", `suppression("text-${idtextlist}")`
   );
   nomlist.appendChild(buttonsuptextlist);
   if (textnom.textContent == null || textnom.textContent == "") {
@@ -330,10 +329,12 @@ function colorlist(color) {
 }
 function suppression(iddelete, choix) {
   if (choix == "yes") {
-    document.getElementById(iddelete).remove();
+    document.getElementById(iddelete).style.display = "none";
   } else {
     if (confirm("Etes vous sur de vouloir supprimer?")) {
-      document.getElementById(iddelete).remove();
+      document.getElementById(iddelete).style.display = "none";
     }
+  } if (choix === "list") {
+    numeall(--nombreList);
   }
 }
