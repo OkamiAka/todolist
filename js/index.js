@@ -5,8 +5,8 @@ let idsouslist = 0;
 let color = "";
 const button = document.querySelector("#Couleur1");
 button.addEventListener("click", function () {
-  const bgbody = "#b6d8f2";
-  const bgnav = "#f6f7cf";
+  const bgbody = "#e2e9c0";
+  const bgnav = "#e7001c";
   document.body.style.background = bgbody;
   document.querySelector("nav").style.background = bgnav;
   document.querySelector("h1").style.color = bgbody;
@@ -73,8 +73,8 @@ button4.addEventListener("click", function () {
 
 const button5 = document.querySelector("#Couleur5");
 button5.addEventListener("click", function () {
-  const bgbody = "";
-  const bgnav = "";
+  const bgbody = "a7e0e0";
+  const bgnav = "#4a919e";
   document.body.style.background = bgbody;
   document.querySelector("nav").style.background = bgnav;
   document.querySelector("h1").style.color = bgbody;
@@ -145,11 +145,11 @@ function creatlist() {
   const list = document.createElement("div");
   list.setAttribute("id", `list-${idlist}`);
   list.classList.add("list");
-  
+
   const para = document.createElement("p");
   list.appendChild(para)
   lists.appendChild(list);
-  
+
   const titlelist = document.createElement("h2");
   titlelist.classList.add("titlelist");
   titlelist.textContent = prompt("Nom de la liste:");
@@ -172,11 +172,11 @@ function creatlist() {
   list.appendChild(nume);
 
   const numelist = document.createElement("p");
-  numelist.textContent=idlist+"/";
+  numelist.textContent = idlist + "/";
   nume.appendChild(numelist);
 
   const numealllist = document.createElement("p");
-  numealllist.textContent=idlist;
+  numealllist.textContent = idlist;
   numealllist.classList.add("allnume");
   numealllist.setAttribute("id", `nume-${idlist}`);
   nume.appendChild(numealllist);
@@ -190,7 +190,7 @@ function creatlist() {
 function numeall(id) {
   const allList = document.getElementsByClassName("allnume");
   for (let i = 1; i <= allList.length; i++) {
-    document.querySelector(`#nume-${i}`).textContent=id;
+    document.querySelector(`#nume-${i}`).textContent = id;
   }
 }
 
