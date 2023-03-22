@@ -148,6 +148,7 @@ function creatlist() {
   list.classList.add("list");
 
   const para = document.createElement("p");
+  para.classList.add('text');
   list.appendChild(para)
   lists.appendChild(list);
 
