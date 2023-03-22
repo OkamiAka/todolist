@@ -3,10 +3,11 @@ let idlist = 0;
 let idtextlist = 0;
 let idsouslist = 0;
 let color = "";
+let nombreList = 0;
 const button = document.querySelector("#Couleur1");
 button.addEventListener("click", function () {
-  const bgbody = "#b6d8f2";
-  const bgnav = "#f6f7cf";
+  const bgbody = "#e2e9c0";
+  const bgnav = "#a7001e";
   document.body.style.background = bgbody;
   document.querySelector("nav").style.background = bgnav;
   document.querySelector("h1").style.color = bgbody;
@@ -73,8 +74,8 @@ button4.addEventListener("click", function () {
 
 const button5 = document.querySelector("#Couleur5");
 button5.addEventListener("click", function () {
-  const bgbody = "";
-  const bgnav = "";
+  const bgbody = "#a7e0e0";
+  const bgnav = "#4a919e";
   document.body.style.background = bgbody;
   document.querySelector("nav").style.background = bgnav;
   document.querySelector("h1").style.color = bgbody;
@@ -146,6 +147,9 @@ function creatlist() {
   const list = document.createElement("div");
   list.setAttribute("id", `list-${idlist}`);
   list.classList.add("list");
+
+  const para = document.createElement("p");
+  list.appendChild(para)
   lists.appendChild(list);
 
   const titlelist = document.createElement("h2");
@@ -160,7 +164,7 @@ function creatlist() {
 
   const buttonsuptextlist = document.createElement("button");
   buttonsuptextlist.classList.add("sup");
-  buttonsuptextlist.setAttribute("onclick", `suppression("list-${idlist}")`);
+  buttonsuptextlist.setAttribute("onclick", `suppression("list-${idlist}","list")`);
   list.appendChild(buttonsuptextlist);
 
   colorlist(color);
@@ -170,25 +174,25 @@ function creatlist() {
   list.appendChild(nume);
 
   const numelist = document.createElement("p");
-  numelist.textContent=idlist+"/";
+  numelist.textContent = ++nombreList + "/";
   nume.appendChild(numelist);
 
   const numealllist = document.createElement("p");
-  numealllist.textContent=idlist;
+  numealllist.textContent = nombreList;
   numealllist.classList.add("allnume");
-  numealllist.setAttribute("id", `nume-${idlist}`);
+  numealllist.setAttribute("id", `nume-${nombreList}`);
   nume.appendChild(numealllist);
 
-  numeall(idlist);
+  numeall(nombreList);
 
   list.style.animationName = "startlist";
   list.style.animationDuration = "2s";
 }
 
 function numeall(id) {
-  const allList = document.getElementsByClassName("allnume");
+  const allList = document.getElementsByClassName("list");
   for (let i = 1; i <= allList.length; i++) {
-    document.querySelector(`#nume-${i}`).textContent=id;
+    document.querySelector(`#nume-${i}`).textContent = id;
   }
 }
 
@@ -231,9 +235,7 @@ function creattextlist(listid) {
 
   const buttonsuptextlist = document.createElement("button");
   buttonsuptextlist.classList.add("sup");
-  buttonsuptextlist.setAttribute(
-    "onclick",
-    `suppression("text-${idtextlist}")`
+  buttonsuptextlist.setAttribute("onclick", `suppression("text-${idtextlist}")`
   );
   nomlist.appendChild(buttonsuptextlist);
   if (textnom.textContent == null || textnom.textContent == "") {
@@ -308,18 +310,20 @@ function colorlist(color) {
   const modifColorList = document.getElementsByClassName("list");
   for (let i = 1; i <= modifColorList.length; i++) {
     if (color == "Couleur1") {
+      document.querySelector(`#list-${i}`).style.background = "#a7001e";
+    } else if(color === "Couleur1") {
       document.querySelector(`#list-${i}`).style.background = "#f6f7cf";
-    } else if (color == "Couleur2") {
+    } else if (color === "Couleur2") {
       document.querySelector(`#list-${i}`).style.background = "#81657c";
-    } else if (color == "Couleur3") {
+    } else if (color === "Couleur3") {
       document.querySelector(`#list-${i}`).style.background = "#F3E779";
-    } else if (color == "Couleur4") {
+    } else if (color === "Couleur4") {
       document.querySelector(`#list-${i}`).style.background = "#a4bd01";
     } else if (color == "Couleur5") {
-      document.querySelector(`#list-${i}`).style.background = "";
-    } else if (color == "CouleurWild") {
+      document.querySelector(`#list-${i}`).style.background = "#4a919e";
+    } else if (color === "CouleurWild") {
       document.querySelector(`#list-${i}`).style.background = "#F7146B";
-    } else if (color == "CouleurSombre") {
+    } else if (color === "CouleurSombre") {
       document.querySelector(`#list-${i}`).style.background = "grey";
     } else {
       document.querySelector(`#list-${i}`).style.background = "#E5E5E5";
@@ -327,12 +331,14 @@ function colorlist(color) {
   }
 }
 function suppression(iddelete, choix) {
-  if (choix == "yes") {
-    document.getElementById(iddelete).remove();
+  if (choix === "yes") {
+    document.getElementById(iddelete).style.display = "none";
   } else {
     if (confirm("Etes vous sur de vouloir supprimer?")) {
-      document.getElementById(iddelete).remove();
+      document.getElementById(iddelete).style.display = "none";
     }
+  } if (choix === "list") {
+    numeall(--nombreList);
 
   }
  /* if(id!=iddelete) {
