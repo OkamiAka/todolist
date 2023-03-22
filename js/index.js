@@ -74,7 +74,7 @@ button4.addEventListener("click", function () {
 
 const button5 = document.querySelector("#Couleur5");
 button5.addEventListener("click", function () {
-  const bgbody = "a7e0e0";
+  const bgbody = "#a7e0e0";
   const bgnav = "#4a919e";
   document.body.style.background = bgbody;
   document.querySelector("nav").style.background = bgnav;
