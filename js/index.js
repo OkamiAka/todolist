@@ -310,12 +310,9 @@ function colorlist(color) {
   for (let i = 1; i <= modifColorList.length; i++) {
     if (color == "Couleur1") {
       document.querySelector(`#list-${i}`).style.background = "#a7001e";
-    } else if (color == "Couleur2") {
-=========
-    if (color === "Couleur1") {
+    } else if(color === "Couleur1") {
       document.querySelector(`#list-${i}`).style.background = "#f6f7cf";
     } else if (color === "Couleur2") {
->>>>>>>>> Temporary merge branch 2
       document.querySelector(`#list-${i}`).style.background = "#81657c";
     } else if (color === "Couleur3") {
       document.querySelector(`#list-${i}`).style.background = "#F3E779";
@@ -323,12 +320,7 @@ function colorlist(color) {
       document.querySelector(`#list-${i}`).style.background = "#a4bd01";
     } else if (color == "Couleur5") {
       document.querySelector(`#list-${i}`).style.background = "#4a919e";
-    } else if (color == "CouleurWild") {
-=========
-    } else if (color === "Couleur5") {
-      document.querySelector(`#list-${i}`).style.background = "";
     } else if (color === "CouleurWild") {
->>>>>>>>> Temporary merge branch 2
       document.querySelector(`#list-${i}`).style.background = "#F7146B";
     } else if (color === "CouleurSombre") {
       document.querySelector(`#list-${i}`).style.background = "grey";
