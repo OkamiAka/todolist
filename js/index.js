@@ -173,11 +173,11 @@ function creatlist() {
   list.appendChild(nume);
 
   const numelist = document.createElement("p");
-  numelist.textContent=idlist+"/";
+  numelist.textContent = ++nombreList + "/";
   nume.appendChild(numelist);
 
   const numealllist = document.createElement("p");
-  numealllist.textContent=idlist;
+  numealllist.textContent = nombreList;
   numealllist.classList.add("allnume");
   numealllist.setAttribute("id", `nume-${nombreList}`);
   nume.appendChild(numealllist);
@@ -309,16 +309,26 @@ function colorlist(color) {
   const modifColorList = document.getElementsByClassName("list");
   for (let i = 1; i <= modifColorList.length; i++) {
     if (color == "Couleur1") {
-      document.querySelector(`#list-${i}`).style.background = "#f6f7cf";
+      document.querySelector(`#list-${i}`).style.background = "#a7001e";
     } else if (color == "Couleur2") {
+=========
+    if (color === "Couleur1") {
+      document.querySelector(`#list-${i}`).style.background = "#f6f7cf";
+    } else if (color === "Couleur2") {
+>>>>>>>>> Temporary merge branch 2
       document.querySelector(`#list-${i}`).style.background = "#81657c";
     } else if (color === "Couleur3") {
       document.querySelector(`#list-${i}`).style.background = "#F3E779";
     } else if (color === "Couleur4") {
       document.querySelector(`#list-${i}`).style.background = "#a4bd01";
     } else if (color == "Couleur5") {
-      document.querySelector(`#list-${i}`).style.background = "";
+      document.querySelector(`#list-${i}`).style.background = "#4a919e";
     } else if (color == "CouleurWild") {
+=========
+    } else if (color === "Couleur5") {
+      document.querySelector(`#list-${i}`).style.background = "";
+    } else if (color === "CouleurWild") {
+>>>>>>>>> Temporary merge branch 2
       document.querySelector(`#list-${i}`).style.background = "#F7146B";
     } else if (color === "CouleurSombre") {
       document.querySelector(`#list-${i}`).style.background = "grey";
