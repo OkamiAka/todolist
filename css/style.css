@@ -100,7 +100,7 @@ h1 {
 }
 
 #Couleur5 {
-  background-color: gray;
+  background-color: #4a919e;
 }
 
 #CouleurWild {
@@ -176,7 +176,7 @@ button.sup {
   animation-duration: 4s;
 }
 
-p.nume{
+p.nume {
   display: flex;
   justify-content: center;
   vertical-align: baseline;
@@ -237,8 +237,8 @@ p.nume{
   }
 
   .color {
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .alllist {
