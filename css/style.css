@@ -2,11 +2,11 @@
   padding: 0;
   margin: 0;
 
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 nav {
-  background: #E5E5E5;
+  background-color: #f3f3f3;
   color: #666;
   display: flex;
   justify-content: space-around;
@@ -14,7 +14,6 @@ nav {
   position: fixed;
   bottom: 0px;
   width: 100%;
-
 }
 
 .Logo:hover {
@@ -33,14 +32,6 @@ p.textnom {
   width: 2rem;
   height: 2rem;
 }
-
-.check button {
-  border: double;
-  background-color: gray;
-  width: 2rem;
-  height: 2rem;
-}
-
 .check p {
   color: #666;
   text-decoration: line-through;
@@ -72,52 +63,40 @@ h1 {
   display: flex;
   justify-content: space-between;
   float: right;
+  height: 2.5rem;
   width: 100px;
-  flex-wrap: wrap;
 }
 
 .color {
   width: 2rem;
   height: 2rem;
-  border-radius: 30%;
 }
 
 #Couleur1 {
   background-color: #a7001e;
+  border-radius: 30%;
 }
 
 #Couleur2 {
+  border-radius: 30%;
   background-color: #b693fc;
 }
 
 #Couleur3 {
-  background-image: url("../img/bois4.png");
+  border-radius: 30%;
+  background-image: url("img/bois4.png");
 }
-
 
 #Couleur4 {
+  border-radius: 30%;
   background-color: #a4bd0a;
-}
-
-#Couleur5 {
-  background-color: gray;
-}
-
-#CouleurWild {
-  background-color: #F7146B;
-  background-image: url(../img/wild.png);
-  background-size: cover;
-}
-
-#CouleurSombre {
-  background-color: black;
 }
 
 .titre {
   display: flex;
   justify-content: center;
   padding: 16px;
-  background: #E5E5E5;
+  border: double;
 }
 
 .Ajouter {
@@ -159,7 +138,6 @@ button.add {
   height: 2rem;
 }
 
-
 button.sup {
   color: red;
   width: 2rem;
@@ -168,39 +146,6 @@ button.sup {
   background-color: transparent;
   background-image: url("../img/croix.png");
   background-size: cover;
-}
-
-.Logo {
-  position: relative;
-  animation-name: start;
-  animation-duration: 4s;
-}
-
-p.nume{
-  display: flex;
-  justify-content: center;
-  vertical-align: baseline;
-}
-
-@keyframes startlist {
-  0% {
-    transform: scale(0.1);
-  }
-}
-
-@keyframes start {
-  0% {
-    left: 0%;
-  }
-
-  50% {
-    transform: rotate(360deg);
-    left: 90%;
-  }
-
-  100% {
-    left: 0%;
-  }
 }
 
 @media screen and (orientation: landscape) {
@@ -215,22 +160,14 @@ p.nume{
     text-align: center;
     justify-content: content;
   }
-
   .no-check button {
     width: 1rem;
     height: 1rem;
   }
-
-  .check button {
-    width: 1rem;
-    height: 1rem;
-  }
-
   button.add {
     width: 1rem;
     height: 1rem;
   }
-
   button.sup {
     width: 1rem;
     height: 1rem;
@@ -244,7 +181,7 @@ p.nume{
   .alllist {
     width: 100%;
     display: grid;
-    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+    grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
     justify-items: center;
   }
 
@@ -254,7 +191,7 @@ p.nume{
   }
 
   nav {
-    background: #E5E5E5;
+    background-color: #f3f3f3;
     color: #666;
     display: flex;
     justify-content: space-between;
@@ -280,12 +217,10 @@ p.nume{
 
   .titre {
     display: none;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   }
 
   .Ajouter {
-    background: #E5E5E5;
     height: 5rem;
     width: 5rem;
     border-color: rgb(130, 3, 3);
