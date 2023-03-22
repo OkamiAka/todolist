@@ -351,7 +351,7 @@ function suppression(iddelete, choix) {
   let s = date.getSeconds(); // 0 - 59
   let session = "AM";
   
-  if(h == 0){
+  if(h === 0){
       h = 12;
   }
   
@@ -364,7 +364,7 @@ function suppression(iddelete, choix) {
   m = (m < 10) ? "0" + m : m;
   s = (s < 10) ? "0" + s : s;
   
-  let time = h + ":" + m + ":" + s + " " + session;
+  let time = ` ${h} : ${m}  : ${s}   ${session}`;
   document.getElementById("clockdisplay").innerText = time;
   document.getElementById("clockdisplay").textContent = time;
   
