@@ -231,4 +231,10 @@ button.sup {
     right: 1rem;
     display: block;
   }
+  /* clock */
+}
+.clock {
+  position: absolute;
+  color: #f7146b;
+  font-size: large;
 }
