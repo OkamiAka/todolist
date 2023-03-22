@@ -135,6 +135,7 @@ buttonDef.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "black";
   document.querySelector("button.Ajouter").style.color = "black";
+ 
   color = buttonDef.id;
   colorlist(color);
 });
@@ -348,7 +349,7 @@ function suppression(iddelete, choix) {
   let s = date.getSeconds(); // 0 - 59
   let session = "AM";
   
-  if(h === 0){
+   if(h === 0){
       h = 12;
   }
   
@@ -356,7 +357,7 @@ function suppression(iddelete, choix) {
       h = h - 12;
       session = "PM";
   }
-  
+ 
   h = (h < 10) ? "0" + h : h;
   m = (m < 10) ? "0" + m : m;
   s = (s < 10) ? "0" + s : s;
@@ -368,3 +369,8 @@ function suppression(iddelete, choix) {
   setTimeout(showTime, 1000);
   
 }
+
+showTime();
+
+
+document.querrySelector("clock").style.color=bgbody;

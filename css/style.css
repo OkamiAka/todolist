@@ -234,9 +234,15 @@ button.sup {
   /* clock */
 }
 .clock {
+<<<<<<< HEAD
   position: relative;
   color: #f7146b;
   font-size: 3.75rem;
   letter-spacing: 0.5rem;
   transform: translateX(-50%) translateY(-50%);
+=======
+  position:relative;
+  
+  font-size:x-large ;
+>>>>>>> 6ea64de165d1284c119649b2a5343a22f268ca4b
 }
