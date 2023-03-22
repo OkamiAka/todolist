@@ -24,6 +24,7 @@ nav {
 
 p.textnom {
   display: inline-block;
+  font-size: 2rem;
 }
 
 .no-check button {
@@ -39,7 +40,7 @@ p.textnom {
 
 .list {
   border-radius: 20%;
-  box-shadow: 10px 5px 5px gray;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
   display: initial;
   word-wrap: break-word;
   width: 90%;
@@ -90,6 +91,20 @@ h1 {
 #Couleur4 {
   border-radius: 30%;
   background-color: #a4bd0a;
+}
+
+#Couleur5 {
+  background-color: #4a919e;
+}
+
+#CouleurWild {
+  background-color: #f7146b;
+  background-image: url("../img/wild.png");
+  background-size: cover;
+}
+
+#CouleurSombre {
+  background-color: black;
 }
 
 .titre {
@@ -148,11 +163,48 @@ button.sup {
   background-size: cover;
 }
 
+.Logo {
+  position: relative;
+  animation-name: start;
+  animation-duration: 4s;
+}
+
+p.nume {
+  display: none;
+  justify-content: center;
+  vertical-align: baseline;
+}
+
+@keyframes startlist {
+  0% {
+    transform: scale(0.1);
+  }
+}
+
+@keyframes start {
+  0% {
+    left: 0%;
+  }
+
+  50% {
+    transform: rotate(360deg);
+    left: 90%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
 @media screen and (orientation: landscape) {
   body {
     display: initial;
     align-items: center;
     justify-content: center;
+  }
+
+  p.textnom {
+    font-size: 1rem;
   }
 
   main {
@@ -174,8 +226,8 @@ button.sup {
   }
 
   .color {
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .alllist {
@@ -226,13 +278,14 @@ button.sup {
     border-color: rgb(130, 3, 3);
     border-radius: 50%;
     font-size: large;
-    position: absolute;
+    position: fixed;
     bottom: 1rem;
     right: 1rem;
     display: block;
   }
   /* clock */
 }
+
 .clock {
   position: relative;
 
