@@ -296,4 +296,10 @@ p.nume{
     right: 1rem;
     display: block;
   }
+  /* clock */
+}
+.clock {
+  position:absolute;
+  color: #F7146B;
+  font-size:large ;
 }
