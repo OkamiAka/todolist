@@ -373,4 +373,4 @@ function suppression(iddelete, choix) {
 showTime();
 
 
-document.querrySelector("clock").style.color=bgbody;
+// document.querrySelector("clock").style.color=bgbody;
