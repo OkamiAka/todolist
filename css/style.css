@@ -299,7 +299,7 @@ p.nume{
   /* clock */
 }
 .clock {
-  position:absolute;
-  color: #F7146B;
-  font-size:large ;
+  position:relative;
+  
+  font-size:x-large ;
 }
