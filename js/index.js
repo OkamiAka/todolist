@@ -335,5 +335,10 @@ function suppression(iddelete, choix) {
     if (confirm("Etes vous sur de vouloir supprimer?")) {
       document.getElementById(iddelete).remove();
     }
+
   }
+ /* if(id!=iddelete) {
+    numeall();
+  }*/
+
 }
