@@ -17,6 +17,7 @@ button.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "black";
   document.querySelector("button.Ajouter").style.color = "black";
+  document.querySelector("#clockdisplay").style.background = bgbody;
   color = button.id;
   colorlist(color);
 });
@@ -33,6 +34,7 @@ button2.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "white";
   document.querySelector("button.Ajouter").style.color = "white";
+  document.querySelector("#clockdisplay").style.background = bgbody;
   color = button2.id;
   colorlist(color);
 });
@@ -52,6 +54,8 @@ button3.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = "#F3E779";
   document.querySelector("button#Ajouter").style.color = "black";
   document.querySelector("button.Ajouter").style.color = "black";
+  document.querySelector("#clockdisplay").style.background = bgbody;
+  document.querySelector("#clockdisplay").style.color = "black";
   color = button3.id;
   colorlist(color);
 });
@@ -68,6 +72,7 @@ button4.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "black";
   document.querySelector("button.Ajouter").style.color = "white";
+  document.querySelector("#clockdisplay").style.background = bgbody;
   color = button4.id;
   colorlist(color);
 });
@@ -85,6 +90,7 @@ button5.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "";
   document.querySelector("button.Ajouter").style.color = "";
+  document.querySelector("#clockdisplay").style.background = bgbody;
   color = button5.id;
   colorlist(color);
 });
@@ -102,6 +108,7 @@ buttonWild.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "";
   document.querySelector("button.Ajouter").style.color = "";
+  document.querySelector("#clockdisplay").style.background = bgbody;
   color = buttonWild.id;
   colorlist(color);
 });
@@ -119,6 +126,7 @@ buttonSombre.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "white";
   document.querySelector("button.Ajouter").style.color = "black";
+  document.querySelector("#clockdisplay").style.background = bgbody;
   color = buttonSombre.id;
   colorlist(color);
 });
@@ -136,6 +144,7 @@ buttonDef.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "black";
   document.querySelector("button.Ajouter").style.color = "black";
+  document.querySelector("#clockdisplay").style.background = bgbody;
  
   color = buttonDef.id;
   colorlist(color);
@@ -361,7 +370,7 @@ function suppression(iddelete, choix) {
   
   if(h > 12){
       h = h - 12;
-      session = "PM";
+      session = "PM"; 
   }
  
   h = (h < 10) ? "0" + h : h;
@@ -380,3 +389,27 @@ showTime();
 
 
 // document.querrySelector("clock").style.color=bgbody;
+/*function clock(color) {
+  const modifColorClick = document.getElementsByClassName("clock");
+  for (let i = 1; i <= modifColorClock.length; i++) {
+    if (color == "Couleur1") {
+      document.querySelector(`.clock-${i}`).style.background = "black";
+    } else if(color === "Couleur1") {
+      document.querySelector(`.clock-${i}`).style.background = "#f6f7cf";
+    } else if (color === "Couleur2") {
+      document.querySelector(`.clock-${i}`).style.background = "#81657c";
+    } else if (color === "Couleur3") {
+      document.querySelector(`.clock-${i}`).style.background = "#F3E779";
+    } else if (color === "Couleur4") {
+      document.querySelector(`.clock-${i}`).style.background = "#a4bd01";
+    } else if (color == "Couleur5") {
+      document.querySelector(`.clock-${i}`).style.background = "#4a919e";
+    } else if (color === "CouleurWild") {
+      document.querySelector(`.clock-${i}`).style.background = "#F7146B";
+    } else if (color === "CouleurSombre") {
+      document.querySelector(`.clock-${i}`).style.background = "grey";
+    } else {
+      document.querySelector(`.clock-${i}`).style.background = "red";
+    }
+  } 
+}*/

@@ -16,6 +16,10 @@ nav {
   width: 100%;
 }
 
+.titleClock {
+  display: flex;
+  align-items: center;
+}
 .Logo:hover {
   -ms-transform: scale(2);
   -webkit-transform: scale(2);
@@ -49,6 +53,7 @@ p.textnom {
 
 h1 {
   display: none;
+  text-align: center;
 }
 
 #Ajouter {
@@ -65,7 +70,7 @@ h1 {
   justify-content: space-between;
   float: right;
   height: 2.5rem;
-  width: 100px;
+  width: 6.25rem;
 }
 
 .color {
@@ -194,6 +199,15 @@ p.nume {
   100% {
     left: 0%;
   }
+  .clock {
+    position: relative;
+    font-size: 0.2rem;
+    letter-spacing: 0.1rem;
+    background-color: #666666db;
+    box-shadow: 10px 5px 5px #1714187a;
+    color: #daab3a;
+    font-family: Orbitron;
+  }
 }
 
 @media screen and (orientation: landscape) {
@@ -283,11 +297,14 @@ p.nume {
     right: 1rem;
     display: block;
   }
+  .clock {
+    position: relative;
+    font-size: 1;
+    letter-spacing: 0.4rem;
+    box-shadow: 10px 5px 5px #1714187a;
+    border-radius: 20%;
+    color: #daab3a;
+    font-family: Orbitron;
+  }
   /* clock */
-}
-
-.clock {
-  position: relative;
-
-  font-size: x-large;
 }
