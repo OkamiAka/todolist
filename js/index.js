@@ -6,7 +6,7 @@ let color = "";
 const button = document.querySelector("#Couleur1");
 button.addEventListener("click", function () {
   const bgbody = "#e2e9c0";
-  const bgnav = "#e7001c";
+  const bgnav = "#a7001e";
   document.body.style.background = bgbody;
   document.querySelector("nav").style.background = bgnav;
   document.querySelector("h1").style.color = bgbody;
@@ -310,7 +310,7 @@ function colorlist(color) {
   const modifColorList = document.getElementsByClassName("list");
   for (let i = 1; i <= modifColorList.length; i++) {
     if (color == "Couleur1") {
-      document.querySelector(`#list-${i}`).style.background = "#f6f7cf";
+      document.querySelector(`#list-${i}`).style.background = "#a7001e";
     } else if (color == "Couleur2") {
       document.querySelector(`#list-${i}`).style.background = "#81657c";
     } else if (color == "Couleur3") {
@@ -318,7 +318,7 @@ function colorlist(color) {
     } else if (color == "Couleur4") {
       document.querySelector(`#list-${i}`).style.background = "#a4bd01";
     } else if (color == "Couleur5") {
-      document.querySelector(`#list-${i}`).style.background = "";
+      document.querySelector(`#list-${i}`).style.background = "#4a919e";
     } else if (color == "CouleurWild") {
       document.querySelector(`#list-${i}`).style.background = "#F7146B";
     } else if (color == "CouleurSombre") {
