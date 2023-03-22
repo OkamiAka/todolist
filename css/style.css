@@ -48,7 +48,6 @@ p.textnom {
 }
 
 .list {
-  border-radius: 20%;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
   display: initial;
   word-wrap: break-word;
