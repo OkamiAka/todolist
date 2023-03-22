@@ -145,25 +145,22 @@ function creatlist() {
   const list = document.createElement("div");
   list.setAttribute("id", `list-${idlist}`);
   list.classList.add("list");
-  
-  const para = document.createElement("p");
-  list.appendChild(para)
   lists.appendChild(list);
-  
+
   const titlelist = document.createElement("h2");
   titlelist.classList.add("titlelist");
   titlelist.textContent = prompt("Nom de la liste:");
-  para.appendChild(titlelist);
+  list.appendChild(titlelist);
 
   const buttonaddlist = document.createElement("button");
   buttonaddlist.classList.add("add");
   buttonaddlist.setAttribute("onclick", `creattextlist("list-${idlist}")`);
-  para.appendChild(buttonaddlist);
+  list.appendChild(buttonaddlist);
 
   const buttonsuptextlist = document.createElement("button");
   buttonsuptextlist.classList.add("sup");
   buttonsuptextlist.setAttribute("onclick", `suppression("list-${idlist}")`);
-  para.appendChild(buttonsuptextlist);
+  list.appendChild(buttonsuptextlist);
 
   colorlist(color);
 
@@ -205,7 +202,7 @@ function check(ch, chid) {
 }
 function creattextlist(listid) {
   idtextlist++;
-  const listtext = document.querySelector(`#${listid} p`);
+  const listtext = document.querySelector(`#${listid}`);
 
   const textlist = document.createElement("div");
   textlist.setAttribute("id", `text-${idtextlist}`);
@@ -335,41 +332,5 @@ function suppression(iddelete, choix) {
     if (confirm("Etes vous sur de vouloir supprimer?")) {
       document.getElementById(iddelete).remove();
     }
-
-  }
- /* if(id!=iddelete) {
-    numeall();
-  }*/
-
+  } 
 }
- /* clock function */
-
- function showTime(){
-  let date = new Date();
-  let h = date.getHours(); // 0 - 23
-  let m = date.getMinutes(); // 0 - 59
-  let s = date.getSeconds(); // 0 - 59
-  let session = "AM";
-  
-  if(h == 0){
-      h = 12;
-  }
-  
-  if(h > 12){
-      h = h - 12;
-      session = "PM";
-  }
-  
-  h = (h < 10) ? "0" + h : h;
-  m = (m < 10) ? "0" + m : m;
-  s = (s < 10) ? "0" + s : s;
-  
-  let time = h + ":" + m + ":" + s + " " + session;
-  document.getElementById("clockdisplay").innerText = time;
-  document.getElementById("clockdisplay").textContent = time;
-  
-  setTimeout(showTime, 1000);
-  
-}
-
-showTime();
