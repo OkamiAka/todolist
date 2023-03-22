@@ -25,6 +25,7 @@ nav {
 
 p.textnom {
   display: inline-block;
+  font-size: 2rem;
 }
 
 .no-check button {
@@ -48,7 +49,7 @@ p.textnom {
 
 .list {
   border-radius: 20%;
-  box-shadow: 10px 5px 5px gray;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
   display: initial;
   word-wrap: break-word;
   width: 90%;
@@ -91,7 +92,7 @@ h1 {
 }
 
 #Couleur3 {
-  background-image: url("../img/bois4.png");
+  background-image: url("../img/bois3.jpg");
 }
 
 
@@ -100,12 +101,12 @@ h1 {
 }
 
 #Couleur5 {
-  background-color: gray;
+  background-color: #4a919e;
 }
 
 #CouleurWild {
   background-color: #F7146B;
-  background-image: url(../img/wild.png);
+  background-image: url("../img/wild.png");
   background-size: cover;
 }
 
@@ -176,9 +177,10 @@ button.sup {
   animation-duration: 4s;
 }
 
-p.nume{
-  display: flex;
+p.nume {
+  display: none;
   justify-content: center;
+  vertical-align: baseline;
 }
 
 @keyframes startlist {
@@ -209,6 +211,10 @@ p.nume{
     justify-content: center;
   }
 
+  p.textnom {
+    font-size: 1rem;
+  }
+
   main {
     display: flex;
     text-align: center;
@@ -236,8 +242,8 @@ p.nume{
   }
 
   .color {
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .alllist {
