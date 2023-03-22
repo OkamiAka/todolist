@@ -234,7 +234,9 @@ button.sup {
   /* clock */
 }
 .clock {
-  position: absolute;
+  position: relative;
   color: #f7146b;
-  font-size: large;
+  font-size: 3.75rem;
+  letter-spacing: 0.5rem;
+  transform: translateX(-50%) translateY(-50%);
 }
