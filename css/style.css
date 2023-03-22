@@ -25,6 +25,7 @@ nav {
 
 p.textnom {
   display: inline-block;
+  font-size: 2rem;
 }
 
 .no-check button {
@@ -176,8 +177,8 @@ button.sup {
   animation-duration: 4s;
 }
 
-p.nume{
-  display: flex;
+p.nume {
+  display: none;
   justify-content: center;
   vertical-align: baseline;
 }
@@ -208,6 +209,10 @@ p.nume{
     display: initial;
     align-items: center;
     justify-content: center;
+  }
+
+  p.textnom {
+    font-size: 1rem;
   }
 
   main {
