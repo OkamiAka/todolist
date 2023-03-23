@@ -17,6 +17,8 @@ button.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "black";
   document.querySelector("button.Ajouter").style.color = "black";
+  document.querySelector("nav").style.borderColor = "black";
+  document.querySelector("h1.titre").style.borderColor = "black";
   color = button.id;
   colorlist(color);
 });
@@ -33,6 +35,8 @@ button2.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "white";
   document.querySelector("button.Ajouter").style.color = "white";
+  document.querySelector("nav").style.borderColor = "black";
+  document.querySelector("h1.titre").style.borderColor = "black";
   color = button2.id;
   colorlist(color);
 });
@@ -52,6 +56,8 @@ button3.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = "#F3E779";
   document.querySelector("button#Ajouter").style.color = "black";
   document.querySelector("button.Ajouter").style.color = "black";
+  document.querySelector("nav").style.borderColor = "#ffffff";
+  document.querySelector("h1.titre").style.borderColor = "#ffffff";
   color = button3.id;
   colorlist(color);
 });
@@ -68,6 +74,8 @@ button4.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "black";
   document.querySelector("button.Ajouter").style.color = "white";
+  document.querySelector("nav").style.borderColor = "black";
+  document.querySelector("h1.titre").style.borderColor = "black";
   color = button4.id;
   colorlist(color);
 });
@@ -85,6 +93,8 @@ button5.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "";
   document.querySelector("button.Ajouter").style.color = "";
+  document.querySelector("nav").style.borderColor = "black";
+  document.querySelector("h1.titre").style.borderColor = "black";
   color = button5.id;
   colorlist(color);
 });
@@ -102,6 +112,8 @@ buttonWild.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "";
   document.querySelector("button.Ajouter").style.color = "";
+  document.querySelector("nav").style.borderColor = "black";
+  document.querySelector("h1.titre").style.borderColor = "black";
   color = buttonWild.id;
   colorlist(color);
 });
@@ -119,6 +131,8 @@ buttonSombre.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "white";
   document.querySelector("button.Ajouter").style.color = "black";
+  document.querySelector("nav").style.borderColor = "#FFFFFF";
+  document.querySelector("h1.titre").style.borderColor = "#FFFFFF";
   color = buttonSombre.id;
   colorlist(color);
 });
@@ -136,6 +150,8 @@ buttonDef.addEventListener("click", function () {
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "black";
   document.querySelector("button.Ajouter").style.color = "black";
+  document.querySelector("nav").style.borderColor = "black";
+  document.querySelector("h1.titre").style.borderColor = "black";
   color = buttonDef.id;
   colorlist(color);
 });
@@ -309,23 +325,29 @@ function creatsouslist(souslistid) {
 function colorlist(color) {
   const modifColorList = document.getElementsByClassName("list");
   for (let i = 1; i <= modifColorList.length; i++) {
-    if (color == "Couleur1") {
-      document.querySelector(`#list-${i}`).style.background = "#a7001e";
-    } else if(color === "Couleur1") {
+     if(color === "Couleur1") {
+      document.querySelector(`#list-${i}`).style.borderColor = "black";
       document.querySelector(`#list-${i}`).style.background = "#f6f7cf";
     } else if (color === "Couleur2") {
+      document.querySelector(`#list-${i}`).style.borderColor = "black";
       document.querySelector(`#list-${i}`).style.background = "#81657c";
     } else if (color === "Couleur3") {
       document.querySelector(`#list-${i}`).style.background = "#F3E779";
+      document.querySelector(`#list-${i}`).style.borderColor = "black";
     } else if (color === "Couleur4") {
+      document.querySelector(`#list-${i}`).style.borderColor = "black";
       document.querySelector(`#list-${i}`).style.background = "#a4bd01";
     } else if (color == "Couleur5") {
+      document.querySelector(`#list-${i}`).style.borderColor = "black";
       document.querySelector(`#list-${i}`).style.background = "#4a919e";
     } else if (color === "CouleurWild") {
+      document.querySelector(`#list-${i}`).style.borderColor = "black";
       document.querySelector(`#list-${i}`).style.background = "#F7146B";
     } else if (color === "CouleurSombre") {
+      document.querySelector(`#list-${i}`).style.borderColor = "#FFFFFF";
       document.querySelector(`#list-${i}`).style.background = "grey";
     } else {
+      document.querySelector(`#list-${i}`).style.borderColor = "black";
       document.querySelector(`#list-${i}`).style.background = "#E5E5E5";
     }
   }
