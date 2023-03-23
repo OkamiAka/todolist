@@ -6,6 +6,8 @@
 }
 
 nav {
+  border-top: solid 1px;
+  border-color:  gray;
   background: #E5E5E5;
   color: #666;
   display: flex;
@@ -48,7 +50,8 @@ p.textnom {
 }
 
 .list {
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+  border: solid 1px;
+  border-color:  gray;
   display: initial;
   word-wrap: break-word;
   width: 90%;
@@ -117,6 +120,8 @@ h1 {
 }
 
 .titre {
+  border-bottom: solid 1px;
+  border-color: gray;
   display: flex;
   justify-content: center;
   padding: 16px;
@@ -263,6 +268,8 @@ p.nume {
   }
 
   nav {
+    border-bottom: solid 1px;
+    border-top: initial;
     background: #E5E5E5;
     color: #666;
     display: flex;
