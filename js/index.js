@@ -327,7 +327,7 @@ function colorlist(color) {
   for (let i = 1; i <= modifColorList.length; i++) {
      if(color === "Couleur1") {
       document.querySelector(`#list-${i}`).style.borderColor = "black";
-      document.querySelector(`#list-${i}`).style.background = "#f6f7cf";
+      document.querySelector(`#list-${i}`).style.background = "rgb(167, 0, 30)";
     } else if (color === "Couleur2") {
       document.querySelector(`#list-${i}`).style.borderColor = "black";
       document.querySelector(`#list-${i}`).style.background = "#81657c";
