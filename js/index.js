@@ -6,7 +6,7 @@ let color = "";
 let nombreList = 0;
 const button = document.querySelector("#Couleur1");
 button.addEventListener("click", function () {
-  const bgbody = "#e2e9c0";
+  const bgbody = "#FFFFFF";
   const bgnav = "#a7001e";
   document.body.style.background = bgbody;
   document.querySelector("nav").style.background = bgnav;
