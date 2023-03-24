@@ -6,9 +6,10 @@ let color = "";
 let nombreList = 0;
 const button = document.querySelector("#Couleur1");
 button.addEventListener("click", function () {
-  const bgbody = "#e2e9c0";
+  const bgbody = "#FFFFFF";
   const bgnav = "#a7001e";
   document.body.style.background = bgbody;
+  document.body.style.color = bgbody;
   document.querySelector("nav").style.background = bgnav;
   document.querySelector("h1").style.color = bgbody;
   document.querySelector("h1.titre").style.color = "black";
@@ -25,8 +26,9 @@ button.addEventListener("click", function () {
 
 const button2 = document.querySelector("#Couleur2");
 button2.addEventListener("click", function () {
-  const bgbody = "#b384a7";
-  const bgnav = "#81657c";
+  const bgbody = "#B587AB";
+  const bgnav = "#675163";
+  document.body.style.color = '#FFF';
   document.body.style.background = bgbody;
   document.querySelector("nav").style.background = bgnav;
   document.querySelector("h1").style.color = "white";
@@ -45,6 +47,7 @@ const button3 = document.querySelector("#Couleur3");
 button3.addEventListener("click", function () {
   const bgbody = "url(img/bois3.jpg)";
   const bgnav = "url(img/bois4.png)";
+  document.body.style.color = '#000';
   document.body.style.background = bgbody;
   document.body.style.backgroundSize = "cover";
   document.querySelector("nav").style.background = bgnav;
@@ -66,6 +69,7 @@ const button4 = document.querySelector("#Couleur4");
 button4.addEventListener("click", function () {
   const bgbody = "#ebf2fa";
   const bgnav = "#a4bd01";
+  document.body.style.color = '#000';
   document.body.style.background = bgbody;
   document.querySelector("nav").style.background = bgnav;
   document.querySelector("h1").style.color = "white";
@@ -83,7 +87,8 @@ button4.addEventListener("click", function () {
 const button5 = document.querySelector("#Couleur5");
 button5.addEventListener("click", function () {
   const bgbody = "#a7e0e0";
-  const bgnav = "#4a919e";
+  const bgnav = "#59A1B1";
+  document.body.style.color = '#000';
   document.body.style.background = bgbody;
   document.querySelector("nav").style.background = bgnav;
   document.querySelector("h1").style.color = bgbody;
@@ -102,7 +107,8 @@ button5.addEventListener("click", function () {
 const buttonWild = document.querySelector("#CouleurWild");
 buttonWild.addEventListener("click", function () {
   const bgbody = "#d8d8d8";
-  const bgnav = "#F7146B";
+  const bgnav = "#F95D99";
+  document.body.style.color = '#000';
   document.body.style.background = bgbody;
   document.querySelector("nav").style.background = bgnav;
   document.querySelector("h1").style.color = bgbody;
@@ -121,7 +127,8 @@ buttonWild.addEventListener("click", function () {
 const buttonSombre = document.querySelector("#CouleurSombre");
 buttonSombre.addEventListener("click", function () {
   const bgbody = "black";
-  const bgnav = "grey";
+  const bgnav = "#969696";
+  document.body.style.color = '#000';
   document.body.style.background = bgbody;
   document.querySelector("nav").style.background = bgnav;
   document.querySelector("h1").style.color = bgbody;
@@ -141,6 +148,7 @@ const buttonDef = document.querySelector("#CouleurDef");
 buttonDef.addEventListener("click", function () {
   const bgbody = "white";
   const bgnav = "#E5E5E5";
+  document.body.style.color = '#000';
   document.body.style.background = bgbody;
   document.querySelector("nav").style.background = bgnav;
   document.querySelector("h1").style.color = "black";
@@ -163,25 +171,37 @@ function creatlist() {
   list.setAttribute("id", `list-${idlist}`);
   list.classList.add("list");
 
-  const para = document.createElement("p");
-  para.classList.add('text');
-  list.appendChild(para)
-  lists.appendChild(list);
-
   const titlelist = document.createElement("h2");
   titlelist.classList.add("titlelist");
   titlelist.textContent = prompt("Nom de la liste:");
-  para.appendChild(titlelist);
+  list.appendChild(titlelist);
+
+  const labelp = document.createElement("p")
+  labelp.classList.add('lab')
+  list.appendChild(labelp)
+
+  const labeladd = document.createElement("label")
+  labeladd.textContent= "Ajouter "
+  labelp.appendChild(labeladd)
 
   const buttonaddlist = document.createElement("button");
   buttonaddlist.classList.add("add");
   buttonaddlist.setAttribute("onclick", `creattextlist("list-${idlist}")`);
-  para.appendChild(buttonaddlist);
+  labeladd.appendChild(buttonaddlist);
+
+  const labelsup = document.createElement("label")
+  labelsup.textContent= "Supprimer "
+  labelp.appendChild(labelsup)
 
   const buttonsuptextlist = document.createElement("button");
   buttonsuptextlist.classList.add("sup");
   buttonsuptextlist.setAttribute("onclick", `suppression("list-${idlist}","list")`);
-  para.appendChild(buttonsuptextlist);
+  labelsup.appendChild(buttonsuptextlist);
+
+  const para = document.createElement("p");
+  para.classList.add('text');
+  list.appendChild(para)
+  lists.appendChild(list);
 
   colorlist(color);
 
@@ -223,7 +243,7 @@ function check(ch, chid) {
 }
 function creattextlist(listid) {
   idtextlist++;
-  const listtext = document.querySelector(`#${listid} p`);
+  const listtext = document.querySelector(`#${listid} p.text`);
 
   const textlist = document.createElement("div");
   textlist.setAttribute("id", `text-${idtextlist}`);
@@ -325,12 +345,12 @@ function creatsouslist(souslistid) {
 function colorlist(color) {
   const modifColorList = document.getElementsByClassName("list");
   for (let i = 1; i <= modifColorList.length; i++) {
-     if(color === "Couleur1") {
+    if (color === "Couleur1") {
       document.querySelector(`#list-${i}`).style.borderColor = "black";
       document.querySelector(`#list-${i}`).style.background = "rgb(167, 0, 30)";
     } else if (color === "Couleur2") {
       document.querySelector(`#list-${i}`).style.borderColor = "black";
-      document.querySelector(`#list-${i}`).style.background = "#81657c";
+      document.querySelector(`#list-${i}`).style.background = "#675163";
     } else if (color === "Couleur3") {
       document.querySelector(`#list-${i}`).style.background = "#F3E779";
       document.querySelector(`#list-${i}`).style.borderColor = "black";
@@ -339,13 +359,13 @@ function colorlist(color) {
       document.querySelector(`#list-${i}`).style.background = "#a4bd01";
     } else if (color == "Couleur5") {
       document.querySelector(`#list-${i}`).style.borderColor = "black";
-      document.querySelector(`#list-${i}`).style.background = "#4a919e";
+      document.querySelector(`#list-${i}`).style.background = "#59A1B1";
     } else if (color === "CouleurWild") {
       document.querySelector(`#list-${i}`).style.borderColor = "black";
-      document.querySelector(`#list-${i}`).style.background = "#F7146B";
+      document.querySelector(`#list-${i}`).style.background = "#F95D99";
     } else if (color === "CouleurSombre") {
       document.querySelector(`#list-${i}`).style.borderColor = "#FFFFFF";
-      document.querySelector(`#list-${i}`).style.background = "grey";
+      document.querySelector(`#list-${i}`).style.background = "#969696";
     } else {
       document.querySelector(`#list-${i}`).style.borderColor = "black";
       document.querySelector(`#list-${i}`).style.background = "#E5E5E5";
