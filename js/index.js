@@ -17,7 +17,7 @@ button.addEventListener("click", function () {
   document.querySelector("button#Ajouter").style.background = bgbody;
   document.querySelector("button.Ajouter").style.background = bgnav;
   document.querySelector("button#Ajouter").style.color = "black";
-  document.querySelector("button.Ajouter").style.color = "black";
+  document.querySelector("button.Ajouter").style.color = "#FFF";
   document.querySelector("nav").style.borderColor = "black";
   document.querySelector("h1.titre").style.borderColor = "black";
   color = button.id;
