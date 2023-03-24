@@ -162,26 +162,38 @@ function creatlist() {
   const list = document.createElement("div");
   list.setAttribute("id", `list-${idlist}`);
   list.classList.add("list");
-  
+
   const titlelist = document.createElement("h2");
   titlelist.classList.add("titlelist");
   titlelist.textContent = prompt("Nom de la liste:");
   list.appendChild(titlelist);
-  
+
+  const labelp = document.createElement("p")
+  labelp.classList.add('lab')
+  list.appendChild(labelp)
+
+  const labeladd = document.createElement("label")
+  labeladd.textContent= "Ajouter "
+  labelp.appendChild(labeladd)
+
   const buttonaddlist = document.createElement("button");
   buttonaddlist.classList.add("add");
   buttonaddlist.setAttribute("onclick", `creattextlist("list-${idlist}")`);
-  list.appendChild(buttonaddlist);
-  
+  labeladd.appendChild(buttonaddlist);
+
+  const labelsup = document.createElement("label")
+  labelsup.textContent= "Supprimer "
+  labelp.appendChild(labelsup)
+
   const buttonsuptextlist = document.createElement("button");
   buttonsuptextlist.classList.add("sup");
   buttonsuptextlist.setAttribute("onclick", `suppression("list-${idlist}","list")`);
-  list.appendChild(buttonsuptextlist);
-  
-    const para = document.createElement("p");
-    para.classList.add('text');
-    list.appendChild(para)
-    lists.appendChild(list);
+  labelsup.appendChild(buttonsuptextlist);
+
+  const para = document.createElement("p");
+  para.classList.add('text');
+  list.appendChild(para)
+  lists.appendChild(list);
 
   colorlist(color);
 
@@ -223,7 +235,7 @@ function check(ch, chid) {
 }
 function creattextlist(listid) {
   idtextlist++;
-  const listtext = document.querySelector(`#${listid} p`);
+  const listtext = document.querySelector(`#${listid} p.text`);
 
   const textlist = document.createElement("div");
   textlist.setAttribute("id", `text-${idtextlist}`);
@@ -325,7 +337,7 @@ function creatsouslist(souslistid) {
 function colorlist(color) {
   const modifColorList = document.getElementsByClassName("list");
   for (let i = 1; i <= modifColorList.length; i++) {
-     if(color === "Couleur1") {
+    if (color === "Couleur1") {
       document.querySelector(`#list-${i}`).style.borderColor = "black";
       document.querySelector(`#list-${i}`).style.background = "rgb(167, 0, 30)";
     } else if (color === "Couleur2") {
